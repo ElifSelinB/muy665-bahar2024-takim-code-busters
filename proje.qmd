@@ -106,7 +106,7 @@ Bu grafikte boy arttD1kC'a rebound sayD1sD1nD1n arttD1DD1nD1 gC6zlemledik. Bekl
 ```{r}
 
 # Veri setini yC<kleme
-veri <- read.csv(file = "NBA_Dataset.csv", head = TRUE, sep=";")
+veri <- read.csv(file = "NBA_Dataset_yeni.csv", head = TRUE, sep=",")
 boy_veri <- veri[1:280,]
 
 #veriyi BLK sC<tununa gC6re sD1ralama
