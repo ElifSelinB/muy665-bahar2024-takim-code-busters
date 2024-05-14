@@ -112,8 +112,8 @@ veri <- read.csv(file = "NBA_Dataset_yeni.csv", header = TRUE, sep = ",")
 # veriyi BLK sütununa göre sıralama
 blok_data <- veri[order(veri$BLK, decreasing = TRUE),]
 
-# BLK sütununa göre sıralanan veriden ilk 50sini alma
-blok_top50 <- blok_data[1:50,]
+# BLK sütununa göre sıralanan veriyi alma
+blok_top50 <- blok_data[1:572,]
 BlokAnaliz <- subset(blok_top50, select = c("Player", "BLK", "Height"))
 colnames(BlokAnaliz) <- c("oyuncu", "blok", "boy")
 
@@ -145,8 +145,8 @@ veri <- read.csv(file = "NBA_Dataset_yeni.csv", header = TRUE, sep = ",")
 # veriyi BLK sütununa göre sıralama
 blok_data <- veri[order(veri$BLK, decreasing = TRUE),]
 
-# BLK sütununa göre sıralanan veriden ilk 50sini alma
-blok_top50 <- blok_data[1:50,]
+# BLK sütununa göre sıralanan veriyi alma
+blok_top50 <- blok_data[1:572,]
 BlokAnaliz <- subset(blok_top50, select = c("Player", "BLK", "Weight"))
 colnames(BlokAnaliz) <- c("oyuncu", "blok", "kilo")
 
