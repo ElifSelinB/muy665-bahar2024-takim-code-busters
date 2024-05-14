@@ -133,6 +133,10 @@ ggplot(BlokAnaliz, aes(x = blok, y = boy)) +
 
 ```
 
+İlgili grafikte oyuncuların boylarının Blok sayıları ile ilşkisini inceledik. Grafiğe göre doğrudan bir ilişki kurulamıyor olsa da boydan bağımsız olarak her oyuncunun blok yapabildiğini görebilyioruz. boyu uzun olan oyuncuların blok sayılarında bir artış da gözlenmekle beraber, boyu uzun olan ama blok sayısı boyu kısa olan oyuncularla aynı olan oyuncular da var.
+
+Ek olarak bir oyuncunun diğer oyunculara kıyasla uzun ve blok sayısının daha farkla yüksek olduğunu görüyoruz. Oyuncu 20 yaşındaki Victor Wembanyama'dır. Pivot olarak görev almakta yani pota altında görev almaktadır. Boyu uzun olduğu icin pota altında oynuyor olma ihtimali ve pota altında oynadığı için de blok oranın yüksek olduğunu yorumlayabiliriz.
+
 Boyu kısa olanları blok yapmak icin basket potasının yakınına koymuyor da olabilirler. Bu da bir yorumdur.
 
 ```{r}
