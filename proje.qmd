@@ -103,6 +103,29 @@ Bu grafikte boy arttD1kC'a rebound sayD1sD1nD1n arttD1DD1nD1 gC6zlemledik. Bekl
 
 ## Block sayD1sD1 - Boy
 
+```{r}
+
+# Veri setini yC<kleme
+veri <- read.csv(file = "NBA_Dataset.csv", head = TRUE, sep=";")
+boy_veri <- veri[1:280,]
+
+#veriyi BLK sC<tununa gC6re sD1ralama
+blok_data <- veri[order(veri$BLK, decreasing = TRUE),]
+
+#BLK sC<tununa gC6re sD1ralanan veriden ilk 50sini alma
+blok_top50 <- blok_data[1:50,]
+BlokAnaliz=subset(blok_top50,select=c("Player", "BLK","Height"))
+colnames(BlokAnaliz)=c("oyuncu","blok","boy")
+
+
+#install.packages("ggplot2")
+library(ggplot2)
+BlokAnaliz$boy <- as.numeric(gsub(",", ".", BlokAnaliz$boy))
+
+hist=ggplot(BlokAnaliz,aes(blok))
+hist+geom_point()
+```
+
 ## Asist - YaE
 
 ## Asist/Top kaybD1 - YaE
