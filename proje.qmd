@@ -113,18 +113,26 @@ veri <- read.csv(file = "NBA_Dataset_yeni.csv", header = TRUE, sep = ",")
 blok_data <- veri[order(veri$BLK, decreasing = TRUE),]
 
 # BLK sütununa göre sıralanan veriyi alma
-blok_top50 <- blok_data[1:572,]
-BlokAnaliz <- subset(blok_top50, select = c("Player", "BLK", "Height"))
-colnames(BlokAnaliz) <- c("oyuncu", "blok", "boy")
+blok_top <- blok_data[1:572,]
+BlokAnaliz <- subset(blok_top, select = c("Player", "BLK", "Height","MP","Weight"))
+colnames(BlokAnaliz) <- c("oyuncu", "blok", "boy","süre","kilo")
 
 # boy sütununu düzgün formata çevirme
 BlokAnaliz$boy <- as.numeric(gsub(",", ".", BlokAnaliz$boy))
+
+# Örneğin, yaşa göre filtreleme yapalım
+filtreli_veri <- veri %>%
+  filter(MP > 20)
+
+# Filtrelenmiş veriyi ekrana yazdırın
+print(filtreli_veri)
+
 
 # ggplot2 kütüphanesini yükleme
 library(ggplot2)
 
 # Scatterplot çizimi
-ggplot(BlokAnaliz, aes(x = blok, y = boy)) +
+ggplot(filtreli_veri, aes(x = BLK, y = Height, color=Pos)) +
   geom_point() +
   labs(title = "Blok Sayısı ve Boy Arasındaki İlişki",
        x = "Blok Sayısı",
