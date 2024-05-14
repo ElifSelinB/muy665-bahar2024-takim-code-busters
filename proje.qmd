@@ -137,8 +137,6 @@ ggplot(BlokAnaliz, aes(x = blok, y = boy)) +
 
 Ek olarak bir oyuncunun diğer oyunculara kıyasla uzun ve blok sayısının daha farkla yüksek olduğunu görüyoruz. Oyuncu 20 yaşındaki Victor Wembanyama'dır. Pivot olarak görev almakta yani pota altında görev almaktadır. Boyu uzun olduğu icin pota altında oynuyor olma ihtimali ve pota altında oynadığı için de blok oranın yüksek olduğunu yorumlayabiliriz.
 
-Boyu kısa olanları blok yapmak icin basket potasının yakınına koymuyor da olabilirler. Bu da bir yorumdur.
-
 ```{r}
 
 # Veri setini yükleme
@@ -167,33 +165,11 @@ ggplot(BlokAnaliz, aes(x = blok, y = kilo)) +
   theme_minimal()
 ```
 
-```{r}
+Yukardaki grafikte oyuncuların kilolarının blok sayıları ile ilşkisini inceledik. Grafiğe göre blok sayıları olan oyuncuların kilo dağılımı 100 ile 120 arasında yoğunlaşmaktadır. 131 kilo olan iki oyuncu vardır ve ikisinin de blok sayısı 1.0 ve 1.1'dir. Aynı zamanda 128 ve 127 kilo oyuncuların da blok sayısının kilosu daha düşük olan oyunculara göre yüksek blok sayılarına ulaşabildiklerini görüyoruz.
 
-# Veri setini yükleme
-veri <- read.csv(file = "NBA_Dataset_yeni.csv", header = TRUE, sep = ",")
+Bunun yanında en düşük kiloya sahip olan oyunculardan Jacob Gilyard'ın blok oranı 1 iken, yakın kilolardaki oyuncuların blok sayılarının 0 olduğunu görüyoruz.
 
-# veriyi BLK sütununa göre sıralama
-blok_data <- veri[order(veri$BLK, decreasing = TRUE),]
-
-# BLK sütununa göre sıralanan veriden ilk 50sini alma
-blok_top50 <- blok_data[1:50,]
-BlokAnaliz <- subset(blok_top50, select = c("Player", "Pos", "BLK"))
-colnames(BlokAnaliz) <- c("oyuncu", "pozisyon", "blok")
-poz_sayilari <- 1:length(veri$Pos)
-
-# pozisyon sütununu düzgün formata çevirme
-BlokAnaliz$pozisyon <- as.numeric(gsub(",", ".", BlokAnaliz$pozisyon))
-
-# ggplot2 kütüphanesini yükleme
-library(ggplot2)
-
-ggplot(veri, aes(x = poz_sayilari, y = blok)) +
-  geom_point() +
-  labs(title = "Pozisyon", x = "Blok sayıları", y = "Pozisyon sayıları") +
-  scale_x_continuous(breaks = poz_sayilari, labels = veri$Pos) +
-  theme_minimal()
-
-```
+Boy karşılaştırmasındaki aynı oyuncunun ise kilosunun 100'ün altında olduğunu görüyoruz.
 
 ## Asist - YaE
 
