@@ -103,7 +103,7 @@ boy_veri |> ggplot()+ geom_point(aes(x = Height, y = TRB), size = 2)+ scale_x_co
 
 Bu grafikte boy arttD1kC'a rebound sayD1sD1nD1n arttD1DD1nD1 gC6zlemledik. Beklenen sonuC' da buydu. Ancak grafikten C'D1karD1lmasD1 gereken bir diDer sonuC' ise 1.9 - 2.1 uzunluDundaki oyuncularD1n 60 TRB deDerinin altD1nda kalan kC\<mesi. Bu oyuncular uzun olmasD1na raDmen diDer oyunculara gC6re dC\<EC\<k performans sergilemiEler. Bir sonraki baElD1kta bu kC\<menin yaE ve kilo ile grafiDine bakD1p bunlarD1n sebep olma ihtimalini inceleyeceDiz.
 
-## Block sayısı - Boy
+## 3.2 Blok - Boy (Selin)
 
 ```{r}
 # Veri setini yükleme
@@ -120,13 +120,15 @@ colnames(BlokAnaliz) <- c("oyuncu", "blok", "boy","süre","kilo")
 # boy sütununu düzgün formata çevirme
 BlokAnaliz$boy <- as.numeric(gsub(",", ".", BlokAnaliz$boy))
 
-# Örneğin, yaşa göre filtreleme yapalım
+# MP'ye göre filtreleme yapalım
 filtreli_veri <- veri %>%
   filter(MP > 20)
 
 # Filtrelenmiş veriyi ekrana yazdırın
 print(filtreli_veri)
 
+# Ortalama blok hesaplama
+ortalama_blok <- mean(filtreli_veri$BLK)
 
 # ggplot2 kütüphanesini yükleme
 library(ggplot2)
@@ -134,12 +136,23 @@ library(ggplot2)
 # Scatterplot çizimi
 ggplot(filtreli_veri, aes(x = BLK, y = Height, color=Pos)) +
   geom_point() +
+  geom_abline(intercept = ortalama_blok, slope = 0, linetype = "dashed", color = "blue") +
   labs(title = "Blok Sayısı ve Boy Arasındaki İlişki",
        x = "Blok Sayısı",
        y = "Boy") +
   theme_minimal()
 
 ```
+
+Bu analizde NBA oyuncularından 20 dakikadan fazla oyunda kalmış oyuncuların Block başarılarının boyla ilgilisi analiz edilmiştir. Renkler pozisyonları göstermektedir. PF-Pivot oyuncuyu göstermektedir.
+
+Boy ile Blok sayısı arasındaki bağlantıyı grafik üzerinden değerlendirdiğimizde
+
+-   Boyu 1.95 ile 2.05 arasında olan oyuncuların blok sayıları benzerdir.
+
+-   Blok sayısı 1.5 ve üzerine olan oyuncuların hepsi 2 metreden uzundur.
+
+-   Pivot oyuncuların boyları 1.93 metre ve üzerindedir.
 
 İlgili grafikte oyuncuların boylarının Blok sayıları ile ilşkisini inceledik. Grafiğe göre doğrudan bir ilişki kurulamıyor olsa da boydan bağımsız olarak her oyuncunun blok yapabildiğini görebilyioruz. boyu uzun olan oyuncuların blok sayılarında bir artış da gözlenmekle beraber, boyu uzun olan ama blok sayısı boyu kısa olan oyuncularla aynı olan oyuncular da var.
 
