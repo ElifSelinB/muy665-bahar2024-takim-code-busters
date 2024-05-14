@@ -78,7 +78,7 @@ Bu analizde NBA 2023-24 sezonundaki ilk 50'ye giren oyuncularD1n verileri kullan
 ```{r}
 
 # Veri setini yC<kleme
-veri <- read.csv(file = "nba_dataset.csv", head = TRUE, sep=";")
+veri <- read.csv(file = "NBA_Dataset_yeni.csv", head = TRUE, sep=",")
 boy_veri <- veri[1:280,]
 
 #veriyi TRB sC<tununa gC6re sD1ralama
@@ -94,6 +94,8 @@ library(ggplot2)
 library(tidyverse)
 library(dslabs)
 
+windows()
+dev.cur()
 
 boy_veri |> ggplot()+ geom_point(aes(x = Height, y = TRB), size = 2)+ scale_x_continuous(limits = c(1.6, 2.3)) +scale_y_continuous(limits = c(25, 280))
 
@@ -122,8 +124,13 @@ colnames(BlokAnaliz)=c("oyuncu","blok","boy")
 library(ggplot2)
 BlokAnaliz$boy <- as.numeric(gsub(",", ".", BlokAnaliz$boy))
 
-hist=ggplot(BlokAnaliz,aes(blok))
+windows()
+dev.cur()
+
+hist=ggplot(BlokAnaliz,aes(x=blok, y=boy))
 hist+geom_point()
+
+
 ```
 
 ## Asist - YaE
