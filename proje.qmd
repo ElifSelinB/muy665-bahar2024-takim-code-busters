@@ -165,11 +165,13 @@ ggplot(BlokAnaliz, aes(x = blok, y = kilo)) +
   theme_minimal()
 ```
 
-Yukardaki grafikte oyuncuların kilolarının blok sayıları ile ilşkisini inceledik. Grafiğe göre blok sayıları olan oyuncuların kilo dağılımı 100 ile 120 arasında yoğunlaşmaktadır. 131 kilo olan iki oyuncu vardır ve ikisinin de blok sayısı 1.0 ve 1.1'dir. Aynı zamanda 128 ve 127 kilo oyuncuların da blok sayısının kilosu daha düşük olan oyunculara göre yüksek blok sayılarına ulaşabildiklerini görüyoruz.
+Yukardaki grafikte oyuncuların kilolarının blok sayıları ile ilşkisini inceledik. Grafiğe göre blok sayıları olan oyuncuların kilo dağılımı 80 ile 110 arasında yoğunlaşmaktadır. 131 kilo olan iki oyuncu vardır ve ikisinin de blok sayısı 1.0 ve 1.1'dir. Aynı zamanda 128 ve 127 kilo oyuncuların da blok sayısının kilosu daha düşük olan oyunculara göre yüksek blok sayılarına ulaşabildiklerini görüyoruz.
 
 Bunun yanında en düşük kiloya sahip olan oyunculardan Jacob Gilyard'ın blok oranı 1 iken, yakın kilolardaki oyuncuların blok sayılarının 0 olduğunu görüyoruz.
 
 Boy karşılaştırmasındaki aynı oyuncunun ise kilosunun 100'ün altında olduğunu görüyoruz.
+
+Kilonun hareketi kısıtlayacağı icin blok sayısı ile ters orantılı olmasını beklerdik fakat, 2'ye yakın ve 2 üzerine çıkan Blok sayılarına ulaşan oyunların genelde ortalama kilonun üzerinde kilolara sahip olduğunu söyleyebiliriz Örneğin 1.5 ve sonraki blok sayısı skorları icin en düşük kilodaki oyuncu 94 kilodur.
 
 ## Asist - YaE
 
