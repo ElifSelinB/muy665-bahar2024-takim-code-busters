@@ -103,7 +103,7 @@ boy_veri |> ggplot()+ geom_point(aes(x = Height, y = TRB), size = 2)+ scale_x_co
 
 Bu grafikte boy arttD1kC'a rebound sayD1sD1nD1n arttD1DD1nD1 gC6zlemledik. Beklenen sonuC' da buydu. Ancak grafikten C'D1karD1lmasD1 gereken bir diDer sonuC' ise 1.9 - 2.1 uzunluDundaki oyuncularD1n 60 TRB deDerinin altD1nda kalan kC\<mesi. Bu oyuncular uzun olmasD1na raDmen diDer oyunculara gC6re dC\<EC\<k performans sergilemiEler. Bir sonraki baElD1kta bu kC\<menin yaE ve kilo ile grafiDine bakD1p bunlarD1n sebep olma ihtimalini inceleyeceDiz.
 
-## Block sayD1sD1 - Boy
+## Block sayısı - Boy
 
 ```{r}
 # Veri setini yükleme
