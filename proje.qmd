@@ -133,6 +133,64 @@ ggplot(BlokAnaliz, aes(x = blok, y = boy)) +
 
 ```
 
+Boyu kısa olanları blok yapmak icin basket potasının yakınına koymuyor da olabilirler. Bu da bir yorumdur.
+
+```{r}
+
+# Veri setini yükleme
+veri <- read.csv(file = "NBA_Dataset_yeni.csv", header = TRUE, sep = ",")
+
+# veriyi BLK sütununa göre sıralama
+blok_data <- veri[order(veri$BLK, decreasing = TRUE),]
+
+# BLK sütununa göre sıralanan veriden ilk 50sini alma
+blok_top50 <- blok_data[1:50,]
+BlokAnaliz <- subset(blok_top50, select = c("Player", "BLK", "Weight"))
+colnames(BlokAnaliz) <- c("oyuncu", "blok", "kilo")
+
+# boy sütununu düzgün formata çevirme
+BlokAnaliz$kilo <- as.numeric(gsub(",", ".", BlokAnaliz$kilo))
+
+# ggplot2 kütüphanesini yükleme
+library(ggplot2)
+
+# Scatterplot çizimi
+ggplot(BlokAnaliz, aes(x = blok, y = kilo)) +
+  geom_point() +
+  labs(title = "Blok Sayısı ve Kilo Arasındaki İlişki",
+       x = "Blok Sayısı",
+       y = "Kilo") +
+  theme_minimal()
+```
+
+```{r}
+
+# Veri setini yükleme
+veri <- read.csv(file = "NBA_Dataset_yeni.csv", header = TRUE, sep = ",")
+
+# veriyi BLK sütununa göre sıralama
+blok_data <- veri[order(veri$BLK, decreasing = TRUE),]
+
+# BLK sütununa göre sıralanan veriden ilk 50sini alma
+blok_top50 <- blok_data[1:50,]
+BlokAnaliz <- subset(blok_top50, select = c("Player", "Pos", "BLK"))
+colnames(BlokAnaliz) <- c("oyuncu", "pozisyon", "blok")
+poz_sayilari <- 1:length(veri$Pos)
+
+# pozisyon sütununu düzgün formata çevirme
+BlokAnaliz$pozisyon <- as.numeric(gsub(",", ".", BlokAnaliz$pozisyon))
+
+# ggplot2 kütüphanesini yükleme
+library(ggplot2)
+
+ggplot(veri, aes(x = poz_sayilari, y = blok)) +
+  geom_point() +
+  labs(title = "Pozisyon", x = "Blok sayıları", y = "Pozisyon sayıları") +
+  scale_x_continuous(breaks = poz_sayilari, labels = veri$Pos) +
+  theme_minimal()
+
+```
+
 ## Asist - YaE
 
 ## Asist/Top kaybD1 - YaE
