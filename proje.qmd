@@ -134,12 +134,12 @@ ortalama_blok <- mean(filtreli_veri$BLK)
 library(ggplot2)
 
 # Scatterplot çizimi
-ggplot(filtreli_veri, aes(x = BLK, y = Height, color=Pos)) +
+ggplot(filtreli_veri, aes(x = Height, y = BLK, color=Pos)) +
   geom_point() +
   geom_abline(intercept = ortalama_blok, slope = 0, linetype = "dashed", color = "blue") +
   labs(title = "Blok Sayısı ve Boy Arasındaki İlişki",
-       x = "Blok Sayısı",
-       y = "Boy") +
+       x = "Boy",
+       y = "Blok Sayısı") +
   theme_minimal()
 
 ```
@@ -154,9 +154,7 @@ Boy ile Blok sayısı arasındaki bağlantıyı grafik üzerinden değerlendirdi
 
 -   Pivot oyuncuların boyları 1.93 metre ve üzerindedir.
 
-İlgili grafikte oyuncuların boylarının Blok sayıları ile ilşkisini inceledik. Grafiğe göre doğrudan bir ilişki kurulamıyor olsa da boydan bağımsız olarak her oyuncunun blok yapabildiğini görebilyioruz. boyu uzun olan oyuncuların blok sayılarında bir artış da gözlenmekle beraber, boyu uzun olan ama blok sayısı boyu kısa olan oyuncularla aynı olan oyuncular da var.
-
-Ek olarak bir oyuncunun diğer oyunculara kıyasla uzun ve blok sayısının daha farkla yüksek olduğunu görüyoruz. Oyuncu 20 yaşındaki Victor Wembanyama'dır. Pivot olarak görev almakta yani pota altında görev almaktadır. Boyu uzun olduğu icin pota altında oynuyor olma ihtimali ve pota altında oynadığı için de blok oranın yüksek olduğunu yorumlayabiliriz.
+İlk maddedeki yoğunluk nedeniyle bu oyuncuların yaş ve kilolarını da inceledik.
 
 ```{r}
 
@@ -167,32 +165,49 @@ veri <- read.csv(file = "NBA_Dataset_yeni.csv", header = TRUE, sep = ",")
 blok_data <- veri[order(veri$BLK, decreasing = TRUE),]
 
 # BLK sütununa göre sıralanan veriyi alma
-blok_top50 <- blok_data[1:572,]
-BlokAnaliz <- subset(blok_top50, select = c("Player", "BLK", "Weight"))
-colnames(BlokAnaliz) <- c("oyuncu", "blok", "kilo")
+blok_top <- blok_data[1:572,]
+BlokAnaliz <- subset(blok_top, select = c("Player", "BLK", "Height","MP","Weight"))
+colnames(BlokAnaliz) <- c("oyuncu", "blok", "boy","süre","kilo")
 
-# boy sütununu düzgün formata çevirme
-BlokAnaliz$kilo <- as.numeric(gsub(",", ".", BlokAnaliz$kilo))
+
+
+# MP'ye göre filtreleme yapalım
+filtreli_veri <- veri %>%
+  filter(MP > 20)
+  
+  # Boya göre filtreleme yapalım
+filtreli_veri2 <- filter(veri, Height >= 1.95 & Height <= 2.05)
+
+# Filtrelenmiş veriyi ekrana yazdırın
+print(filtreli_veri)
+
+# Ortalama blok hesaplama
+ortalama_blok <- mean(filtreli_veri$BLK)
 
 # ggplot2 kütüphanesini yükleme
 library(ggplot2)
 
 # Scatterplot çizimi
-ggplot(BlokAnaliz, aes(x = blok, y = kilo)) +
+ggplot(filtreli_veri2, aes(x = Weight, y = BLK, color=Pos)) +
   geom_point() +
+  geom_abline(intercept = ortalama_blok, slope = 0, linetype = "dashed", color = "blue") +
   labs(title = "Blok Sayısı ve Kilo Arasındaki İlişki",
-       x = "Blok Sayısı",
-       y = "Kilo") +
+       x = "Kilo",
+       y = "Blok Sayısı") +
   theme_minimal()
+
+
 ```
 
-Yukardaki grafikte oyuncuların kilolarının blok sayıları ile ilşkisini inceledik. Grafiğe göre blok sayıları olan oyuncuların kilo dağılımı 80 ile 110 arasında yoğunlaşmaktadır. 131 kilo olan iki oyuncu vardır ve ikisinin de blok sayısı 1.0 ve 1.1'dir. Aynı zamanda 128 ve 127 kilo oyuncuların da blok sayısının kilosu daha düşük olan oyunculara göre yüksek blok sayılarına ulaşabildiklerini görüyoruz.
+Bu analizde NBA oyuncularından 20 dakikadan fazla oyunda kalmış ve boyu 1.95 ile 2.05 arasında olan oyuncuların Block başarılarının kilo ile ilgisi analiz edilmiştir. Renkler pozisyonları göstermektedir.
 
-Bunun yanında en düşük kiloya sahip olan oyunculardan Jacob Gilyard'ın blok oranı 1 iken, yakın kilolardaki oyuncuların blok sayılarının 0 olduğunu görüyoruz.
+Kilo ile Blok sayısı arasındaki bağlantıyı grafik üzerinden değerlendirdiğimizde
 
-Boy karşılaştırmasındaki aynı oyuncunun ise kilosunun 100'ün altında olduğunu görüyoruz.
+-   Ortalama blok sayısının üzerinde blok başarısı elde eden oyuncuların 80-115 kg arasındadır.
 
-Kilonun hareketi kısıtlayacağı icin blok sayısı ile ters orantılı olmasını beklerdik fakat, 2'ye yakın ve 2 üzerine çıkan Blok sayılarına ulaşan oyunların genelde ortalama kilonun üzerinde kilolara sahip olduğunu söyleyebiliriz Örneğin 1.5 ve sonraki blok sayısı skorları icin en düşük kilodaki oyuncu 94 kilodur.
+-   Bir oyuncu 120 kilonun üzerinde olmasına rağmen ortalamanın üzerindedir
+
+-   Merkez oyuncular 78 ile 100 kg arasındadır.
 
 ## Asist - YaE
 
