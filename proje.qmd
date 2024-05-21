@@ -73,39 +73,86 @@ https://www.nba.com/players sayfasD1ndan ise 572 oyuncunun boy, kilo verisini an
 
 Bu analizde NBA 2023-24 sezonundaki ilk 50'ye giren oyuncularD1n verileri kullanmD1EtD1r. D0ncelenecek alt baElD1klar aEaDD1daki gibidir:
 
-## Bar Grafiği
+## Su Tüketimleri - Üretim ve Ülke 
 
 ```{r}
 
 
 # Veri setini yukleme
-veri <- read.csv(file = "Data_Son.csv", head = TRUE, sep=";")
+veri <- read.csv(file = "datalisted.csv", head = TRUE, sep=";")
 
 print(veri)
 
-names(veri) <- gsub("\\.", ",", names(veri))
-print(veri)
+# veriyi Satıs sütununa göre sıralama
+satis_data <- veri[order(veri$SAL, decreasing = TRUE),]
 
-# veriyi BLK sütununa göre sıralama
-blok_data <- veri[order(veri$SAL, decreasing = TRUE),]
-
-
-
-
-```
-
-```{r}
-# Veri setini hazırlama
-Water_Analiz <- veri[1:572,]
-BlokAnaliz <- subset(blok_top, select = c("Player", "BLK", "Height","MP","Weight"))
-veri <- data.frame('Country','Energy Efficiency Class','Construction','Water Cons.')
+# satıs sütununa göre sıralanan veriyi alma
+SatisAnaliz <- subset(satis_data, select = c("Count", "SAL", "WtCns","En","NOI"))
 
 # ggplot2 kütüphanesini yükleme
 library(ggplot2) 
 
 # Bar grafiğini çizelim (örneğin, enerji verimliliği için)
-bar=ggplot2(veri,aes(x=Country,y=Water Cons.))
+bar=ggplot(SatisAnaliz,aes(x=SAL,y=WtCns,fill=Count))
 bar+geom_bar(stat="identity")
+
+print(bar)
+
+
+```
+
+```{r}
+
+
+# Veri setini yukleme
+veri <- read.csv(file = "datalisted.csv", head = TRUE, sep=";")
+
+print(veri)
+
+# veriyi Satıs sütununa göre sıralama
+satis_data <- veri[order(veri$SAL, decreasing = TRUE),]
+
+# satıs sütununa göre sıralanan veriyi alma
+SatisAnaliz <- subset(satis_data, select = c("Count", "SAL", "WtCns","En","NOI"))
+
+# ggplot2 kütüphanesini yükleme
+library(ggplot2) 
+
+# Bar grafiğini çizelim (örneğin, enerji verimliliği için)
+bar=ggplot(SatisAnaliz,aes(x=SAL,y=WtCns,fill=Count))
+bar+geom_bar(stat="identity",position="dodge")+geom_text(aes(label=WtCns),colour="black",position=position_dodge(0.9),size=3)
+
+print(bar)
+
+
+```
+
+```{r}
+
+
+# Veri setini yukleme
+veri <- read.csv(file = "datalisted.csv", head = TRUE, sep=";")
+
+print(veri)
+
+# veriyi Satıs sütununa göre sıralama
+satis_data <- veri[order(veri$SAL, decreasing = TRUE),]
+
+# satıs sütununa göre sıralanan veriyi alma
+SatisAnaliz <- subset(satis_data, select = c("Count", "SAL", "WtCns","En","NOI"))
+
+# ggplot2 kütüphanesini yükleme
+library(ggplot2) 
+
+
+# Scatterplot çizimi
+ggplot(SatisAnaliz, aes(x = SAL,y = WtCns,color = Count)) +
+  geom_point() +
+  labs(title = "Ülke Su Tuketimleri",
+       x = "Satis",
+       y = "Su Tuketimleri") +
+  theme_minimal()
+
 
 ```
 
