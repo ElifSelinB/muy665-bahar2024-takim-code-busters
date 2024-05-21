@@ -1,5 +1,5 @@
 ---
-title: "CTRL - NBA"
+title: "Bitirme Projesi"
 number-sections: true
 ---
 
@@ -73,31 +73,39 @@ https://www.nba.com/players sayfasD1ndan ise 572 oyuncunun boy, kilo verisini an
 
 Bu analizde NBA 2023-24 sezonundaki ilk 50'ye giren oyuncularD1n verileri kullanmD1EtD1r. D0ncelenecek alt baElD1klar aEaDD1daki gibidir:
 
-## Rebound - Boy
+## Bar Grafiği
 
 ```{r}
 
-# Veri setini yC<kleme
-veri <- read.csv(file = "NBA_Dataset_yeni.csv", head = TRUE, sep=",")
-boy_veri <- veri[1:280,]
 
-#veriyi TRB sC<tununa gC6re sD1ralama
-rebounds_data <- veri[order(boy_veri$TRB, decreasing = TRUE),]
+# Veri setini yukleme
+veri <- read.csv(file = "Data_Son.csv", head = TRUE, sep=";")
 
-#TRB sC<tununa gC6re sD1ralanan veriden ilk 50sini alma
-rebounds_top50 <- rebounds_data[1:50,]
-TRB <- rebounds_data[,c("Player", "TRB")]
-Height <- rebounds_data[,c("Player", "Height")]
+print(veri)
 
-#print(TRB,row.names = FALSE)
-library(ggplot2)
-library(tidyverse)
-library(dslabs)
+names(veri) <- gsub("\\.", ",", names(veri))
+print(veri)
 
-windows()
-dev.cur()
+# veriyi BLK sütununa göre sıralama
+blok_data <- veri[order(veri$SAL, decreasing = TRUE),]
 
-boy_veri |> ggplot()+ geom_point(aes(x = Height, y = TRB), size = 2)+ scale_x_continuous(limits = c(1.6, 2.3)) +scale_y_continuous(limits = c(25, 280))
+
+
+
+```
+
+```{r}
+# Veri setini hazırlama
+Water_Analiz <- veri[1:572,]
+BlokAnaliz <- subset(blok_top, select = c("Player", "BLK", "Height","MP","Weight"))
+veri <- data.frame('Country','Energy Efficiency Class','Construction','Water Cons.')
+
+# ggplot2 kütüphanesini yükleme
+library(ggplot2) 
+
+# Bar grafiğini çizelim (örneğin, enerji verimliliği için)
+bar=ggplot2(veri,aes(x=Country,y=Water Cons.))
+bar+geom_bar(stat="identity")
 
 ```
 
