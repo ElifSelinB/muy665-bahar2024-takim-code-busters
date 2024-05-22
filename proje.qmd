@@ -83,7 +83,6 @@ veri$Con <- as.factor(veri$Con)
 print(veri)
 
 
-
 # veriyi Satıs sütununa göre sıralama
 satis_data <- veri[order(veri$SAL, decreasing = TRUE),]
 
@@ -148,6 +147,75 @@ bar+geom_bar(stat="identity",position="dodge")+geom_text(aes(label=WtCns),colour
 
 print(bar)
 
+
+```
+
+# Enerji Bazlı Satış Adedi Analizi 
+
+Bu analizde NBA 2023-24 sezonundaki ilk 50'ye giren oyuncularD1n verileri kullanmD1EtD1r. D0ncelenecek alt baElD1klar aEaDD1daki gibidir:
+
+```{r}
+
+# Veri setini yukleme
+veri <- read.csv(file = "datalisted.csv", head = TRUE, sep=";")
+
+typeof(veri)
+
+veri$Size <- as.factor(veri$Size)
+veri$GR <- as.factor(veri$GR)
+veri$Count <- as.factor(veri$Count)
+veri$Cons <- as.factor(veri$Cons)
+veri$Height <- as.factor(veri$Height)
+veri$Int <- as.factor(veri$Int)
+veri$Col <- as.factor(veri$Col)
+veri$Dis <- as.factor(veri$Dis)
+veri$Time <- as.factor(veri$Time)
+veri$WtCns <- as.factor(veri$WtCns)
+veri$En <- as.factor(veri$En)
+veri$Cap <- as.factor(veri$Cap)
+veri$Mot <- as.factor(veri$Mot)
+veri$Fast <- as.factor(veri$Fast)
+veri$PRG <- as.factor(veri$PRG)
+veri$NOI <- as.factor(veri$NOI)
+veri$Thrd <- as.factor(veri$Thrd)
+veri$SLI <- as.factor(veri$SLI)
+veri$AUD <- as.factor(veri$AUD)
+veri$Con <- as.factor(veri$Con)
+
+print(veri)
+
+# veriyi Satıs sütununa göre sıralama
+satis_data <- veri[order(veri$SAL, decreasing = TRUE),]
+
+# satıs sütununa göre sıralanan veriyi alma
+SatisAnaliz <- subset(satis_data, select = c("Count", "SAL", "WtCns","En","NOI"))
+
+install.packages("dplyr")
+
+
+# Libraries
+library(ggplot2)
+library(dplyr)
+
+# Veriyi Satıs sütununa göre sıralama
+satis_data <- veri %>%
+  arrange(desc(SAL))
+
+# Satıs sütununa göre sıralanan veriyi alma
+SatisAnaliz <- satis_data %>%
+  select(Count, SAL, WtCns, En, NOI)
+
+# Plot
+ggplot(SatisAnaliz, aes(x = En, y = SAL, fill = En)) +
+  geom_boxplot() +
+  geom_jitter(color = "black", size = 0.4, alpha = 0.9) +
+  theme_minimal() +
+  theme(
+    legend.position = "none",
+    plot.title = element_text(size = 11)
+  ) +
+  ggtitle("Enerji Satış Oranı Dağılımı") +
+  xlab("")
 
 ```
 
