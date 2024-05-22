@@ -3,15 +3,12 @@ title: "Bitirme Projesi"
 number-sections: true
 ---
 
-## Su Tüketimleri - Üretim ve Ülke
+# Enerji Bazlı Üretim Adetleri Değişimi 
 
 ```{r}
 
-
 # Veri setini yukleme
 veri <- read.csv(file = "datalisted.csv", head = TRUE, sep=";")
-
-print(veri)
 
 veri$Size <- as.factor(veri$Size)
 veri$GR <- as.factor(veri$GR)
@@ -30,20 +27,70 @@ veri$Thrd <- as.factor(veri$Thrd)
 veri$SLI <- as.factor(veri$SLI)
 veri$AUD <- as.factor(veri$AUD)
 veri$Con <- as.factor(veri$Con)
-veri$SAL22 <- as.float(veri$SAL22)
-veri$SAL23 <- as.float(veri$SAL23)
+veri$SAL22 <- as.numeric(veri$SAL22)
+veri$SAL23 <- as.numeric(veri$SAL23)
+
 
 # veriyi Satıs sütununa göre sıralama
-satis_data <- veri[order(veri$SAL, decreasing = TRUE),]
+satis_data <- veri[order(veri$SAL23, decreasing = TRUE),]
 
 # satıs sütununa göre sıralanan veriyi alma
-SatisAnaliz <- subset(satis_data, select = c("Count", "SAL", "WtCns","En","NOI"))
+SatisAnaliz <- subset(satis_data, select = c("Count", "SAL23","SAL22", "WtCns","En","NOI"))
+
+# ggplot2 kütüphanesini yükleme
+library(ggplot2) 
+
+
+# Enerji sınıfı başlıklarına göre toplam SAL22 ve SAL23 değerlerini bulma
+toplam_satis <- aggregate(. ~ En, data = SatisAnaliz, FUN = sum, na.rm = TRUE)
+print(toplam_satis)
+
+```
+
+# 
+
+## Su Tüketimleri - Üretim ve Ülke
+
+```{r}
+
+
+# Veri setini yukleme
+veri <- read.csv(file = "datalisted.csv", head = TRUE, sep=";")
+
+veri$Size <- as.factor(veri$Size)
+veri$GR <- as.factor(veri$GR)
+veri$Count <- as.factor(veri$Count)
+veri$Cons <- as.factor(veri$Cons)
+veri$Col <- as.factor(veri$Col)
+veri$Dis <- as.factor(veri$Dis)
+veri$Time <- as.factor(veri$Time)
+veri$WtCns <- as.factor(veri$WtCns)
+veri$En <- as.factor(veri$En)
+veri$Cap <- as.factor(veri$Cap)
+veri$Fast <- as.factor(veri$Fast)
+veri$PRG <- as.factor(veri$PRG)
+veri$NOI <- as.factor(veri$NOI)
+veri$Thrd <- as.factor(veri$Thrd)
+veri$SLI <- as.factor(veri$SLI)
+veri$AUD <- as.factor(veri$AUD)
+veri$Con <- as.factor(veri$Con)
+veri$SAL22 <- as.numeric(veri$SAL22)
+veri$SAL23 <- as.numeric(veri$SAL23)
+
+print(veri)
+
+
+# veriyi Satıs sütununa göre sıralama
+satis_data <- veri[order(veri$SAL23, decreasing = TRUE),]
+
+# satıs sütununa göre sıralanan veriyi alma
+SatisAnaliz <- subset(satis_data, select = c("Count", "SAL23","SAL22", "WtCns","En","NOI"))
 
 # ggplot2 kütüphanesini yükleme
 library(ggplot2) 
 
 # Bar grafiğini çizelim (örneğin, enerji verimliliği için)
-bar=ggplot(SatisAnaliz,aes(x=SAL,y=WtCns,fill=Count))
+bar=ggplot(SatisAnaliz,aes(x=SAL23,y=WtCns,fill=Count))
 bar+geom_bar(stat="identity")
 
 print(bar)
