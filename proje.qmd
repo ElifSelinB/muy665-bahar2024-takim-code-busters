@@ -9,28 +9,6 @@ number-sections: true
 
 # Proje Genel BakD1ED1 ve KapsamD1
 
-Code Busters olarak dC6nem projemizde NBA'in 2023-2024 sezonuna ait oyuncu istatistiklerinden yola C'D1karak oyuncu performansD1nD1 etkileyen parametreleri incelemeyi amaC'ladD1k. Projede, R Studio kullanarak veri ayD1klama, keEifsel veri analizi, gC6rselleEtirme ve istatistiksel analiz teknikleri kullanD1lmasD1 planlandD1.
-
-## Analiz Edilecek DeDiEkenler:
-
-Oyuncu D0statistikleri: MaC' baED1na dC\<Een SayD1, Asist, Ribaund, Blok, Top Calma, Saha D0C'i AtD1E YC\<zdesi, Saha DD1ED1 AtD1E YC\<zdesi vb.
-
-Oyuncu Czellikleri: YaE, Boy, Kilo, Pozisyon vb.
-
-## Analiz Teknikleri:
-
-1)  Eksik verilerin iElenmesi, veri tC\<rlerinin dC6nC\<EtC\<rC\<lmesi
-2)  Veri daDD1lD1mlarD1nD1n incelenmesi, histogramlar, kutu grafikleri, daDD1lD1m grafikleri ile gC6rselleEtirme
-3)  Beklenen sonuC'larD1n gerC'ek sonuC'lar ile karED1laEtD1rD1lmasD1
-
-## KD1sD1tlar ve Cnemli Notlar:
-
-Veri setinde eksik gC6zlemler olabilir, bunlarD1n ele alD1nmasD1 ve gelecek C'alD1Emalarda etkisinin deDerlendirilmesi gerekebilir. Oyuncu istatistikleri ve oyuncu C6zellikleri arasD1ndaki iliEki gC6rC\<ndC\<DC\<nden daha karmaED1ktD1r ve tek bir faktC6rle sD1nD1rlD1 olmayabilir.
-
-## Zaman Cizelgesi:
-
-Veri toplama ve temizleme, Analiz ve model oluEturma, SonuC'larD1n derlenmesi ve sunumu adD1mlarD1 iC'in atanmD1E sC\<re 6 Nisan ile 15 MayD1s aralD1DD1dD1r, tabiki son haftaya bD1rakmadD1k...
-
 # VERİ
 
 ## Veri KaynaDD1
@@ -73,7 +51,7 @@ https://www.nba.com/players sayfasD1ndan ise 572 oyuncunun boy, kilo verisini an
 
 Bu analizde NBA 2023-24 sezonundaki ilk 50'ye giren oyuncularD1n verileri kullanmD1EtD1r. D0ncelenecek alt baElD1klar aEaDD1daki gibidir:
 
-## Su Tüketimleri - Üretim ve Ülke 
+## Su Tüketimleri - Üretim ve Ülke
 
 ```{r}
 
@@ -81,7 +59,30 @@ Bu analizde NBA 2023-24 sezonundaki ilk 50'ye giren oyuncularD1n verileri kullan
 # Veri setini yukleme
 veri <- read.csv(file = "datalisted.csv", head = TRUE, sep=";")
 
+veri$Size <- as.factor(veri$Size)
+veri$GR <- as.factor(veri$GR)
+veri$Count <- as.factor(veri$Count)
+veri$Cons <- as.factor(veri$Cons)
+veri$Height <- as.factor(veri$Height)
+veri$Int <- as.factor(veri$Int)
+veri$Col <- as.factor(veri$Col)
+veri$Dis <- as.factor(veri$Dis)
+veri$Time <- as.factor(veri$Time)
+veri$WtCns <- as.factor(veri$WtCns)
+veri$En <- as.factor(veri$En)
+veri$Cap <- as.factor(veri$Cap)
+veri$Mot <- as.factor(veri$Mot)
+veri$Fast <- as.factor(veri$Fast)
+veri$PRG <- as.factor(veri$PRG)
+veri$NOI <- as.factor(veri$NOI)
+veri$Thrd <- as.factor(veri$Thrd)
+veri$SLI <- as.factor(veri$SLI)
+veri$AUD <- as.factor(veri$AUD)
+veri$Con <- as.factor(veri$Con)
+
 print(veri)
+
+
 
 # veriyi Satıs sütununa göre sıralama
 satis_data <- veri[order(veri$SAL, decreasing = TRUE),]
@@ -103,14 +104,37 @@ print(bar)
 
 ```{r}
 
-
 # Veri setini yukleme
 veri <- read.csv(file = "datalisted.csv", head = TRUE, sep=";")
+
+typeof(veri)
+
+veri$Size <- as.factor(veri$Size)
+veri$GR <- as.factor(veri$GR)
+veri$Count <- as.factor(veri$Count)
+veri$Cons <- as.factor(veri$Cons)
+veri$Height <- as.factor(veri$Height)
+veri$Int <- as.factor(veri$Int)
+veri$Col <- as.factor(veri$Col)
+veri$Dis <- as.factor(veri$Dis)
+veri$Time <- as.factor(veri$Time)
+veri$WtCns <- as.factor(veri$WtCns)
+veri$En <- as.factor(veri$En)
+veri$Cap <- as.factor(veri$Cap)
+veri$Mot <- as.factor(veri$Mot)
+veri$Fast <- as.factor(veri$Fast)
+veri$PRG <- as.factor(veri$PRG)
+veri$NOI <- as.factor(veri$NOI)
+veri$Thrd <- as.factor(veri$Thrd)
+veri$SLI <- as.factor(veri$SLI)
+veri$AUD <- as.factor(veri$AUD)
+veri$Con <- as.factor(veri$Con)
 
 print(veri)
 
 # veriyi Satıs sütununa göre sıralama
 satis_data <- veri[order(veri$SAL, decreasing = TRUE),]
+
 
 # satıs sütununa göre sıralanan veriyi alma
 SatisAnaliz <- subset(satis_data, select = c("Count", "SAL", "WtCns","En","NOI"))
