@@ -3,7 +3,7 @@ title: "Bitirme Projesi"
 number-sections: true
 ---
 
-# Enerji Bazlı Üretim Adetleri Değişimi 
+# Enerji Bazlı Üretim Adetleri Değişimi
 
 ```{r}
 
@@ -27,22 +27,29 @@ veri$Thrd <- as.factor(veri$Thrd)
 veri$SLI <- as.factor(veri$SLI)
 veri$AUD <- as.factor(veri$AUD)
 veri$Con <- as.factor(veri$Con)
-veri$SAL22 <- as.numeric(veri$SAL22)
-veri$SAL23 <- as.numeric(veri$SAL23)
+veri$SAL22 <- as.integer(veri$SAL22)
+veri$SAL23 <- as.integer(veri$SAL23)
 
+print(veri)
 
 # veriyi Satıs sütununa göre sıralama
 satis_data <- veri[order(veri$SAL23, decreasing = TRUE),]
+
 
 # satıs sütununa göre sıralanan veriyi alma
 SatisAnaliz <- subset(satis_data, select = c("Count", "SAL23","SAL22", "WtCns","En","NOI"))
 
 # ggplot2 kütüphanesini yükleme
 library(ggplot2) 
-
+# dplyr paketini yükleme
+library(dplyr)
 
 # Enerji sınıfı başlıklarına göre toplam SAL22 ve SAL23 değerlerini bulma
-toplam_satis <- aggregate(. ~ En, data = SatisAnaliz, FUN = sum, na.rm = TRUE)
+toplam_satis <- SatisAnaliz %>%
+  group_by(En) %>%
+  summarise(Toplam_SAL22 = sum(SAL22, na.rm = TRUE),
+            Toplam_SAL23 = sum(SAL23, na.rm = TRUE))
+
 print(toplam_satis)
 
 ```
