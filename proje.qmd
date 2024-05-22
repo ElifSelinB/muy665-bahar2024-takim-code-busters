@@ -11,19 +11,18 @@ number-sections: true
 # Veri setini yukleme
 veri <- read.csv(file = "datalisted.csv", head = TRUE, sep=";")
 
+print(veri)
+
 veri$Size <- as.factor(veri$Size)
 veri$GR <- as.factor(veri$GR)
 veri$Count <- as.factor(veri$Count)
 veri$Cons <- as.factor(veri$Cons)
-veri$Height <- as.factor(veri$Height)
-veri$Int <- as.factor(veri$Int)
 veri$Col <- as.factor(veri$Col)
 veri$Dis <- as.factor(veri$Dis)
 veri$Time <- as.factor(veri$Time)
 veri$WtCns <- as.factor(veri$WtCns)
 veri$En <- as.factor(veri$En)
 veri$Cap <- as.factor(veri$Cap)
-veri$Mot <- as.factor(veri$Mot)
 veri$Fast <- as.factor(veri$Fast)
 veri$PRG <- as.factor(veri$PRG)
 veri$NOI <- as.factor(veri$NOI)
@@ -31,6 +30,8 @@ veri$Thrd <- as.factor(veri$Thrd)
 veri$SLI <- as.factor(veri$SLI)
 veri$AUD <- as.factor(veri$AUD)
 veri$Con <- as.factor(veri$Con)
+veri$SAL22 <- as.float(veri$SAL22)
+veri$SAL23 <- as.float(veri$SAL23)
 
 # veriyi Satıs sütununa göre sıralama
 satis_data <- veri[order(veri$SAL, decreasing = TRUE),]
