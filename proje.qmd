@@ -425,7 +425,7 @@ ggplot(D_energy, aes(x = SAL23, y = GR, size = SAL23, fill = GR)) +
   facet_wrap(~ Count)  # Ülkeye göre grafikleri ayır
 ```
 
-## D Enerji Ürünlerin Marka  ve Connected S Seçimi
+## D Enerji Ürünlerin Marka ve Connected S Seçimi
 
 ```{r}
 
