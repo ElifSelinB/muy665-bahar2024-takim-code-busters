@@ -247,9 +247,9 @@
   {
     "objectID": "proje.html",
     "href": "proje.html",
-    "title": "CTRL - NBA",
+    "title": "Bitirme Projesi",
     "section": "",
-    "text": "Proje sayfamıza hoş geldiniz.\nProjemizle ilgili güncellemelerden haberdar olmak için bu alanı takip edin."
+    "text": "# Veri setini yukleme\nveri &lt;- read.csv(file = \"datalisted.csv\", head = TRUE, sep=\";\")\n\nveri$Size &lt;- as.factor(veri$Size)\nveri$GR &lt;- as.factor(veri$GR)\nveri$Count &lt;- as.factor(veri$Count)\nveri$Cons &lt;- as.factor(veri$Cons)\nveri$Height &lt;- as.factor(veri$Height)\nveri$Int &lt;- as.factor(veri$Int)\nveri$Col &lt;- as.factor(veri$Col)\nveri$Dis &lt;- as.factor(veri$Dis)\nveri$Time &lt;- as.factor(veri$Time)\nveri$WtCns &lt;- as.factor(veri$WtCns)\nveri$En &lt;- as.factor(veri$En)\nveri$Cap &lt;- as.factor(veri$Cap)\nveri$Mot &lt;- as.factor(veri$Mot)\nveri$Fast &lt;- as.factor(veri$Fast)\nveri$PRG &lt;- as.factor(veri$PRG)\nveri$NOI &lt;- as.factor(veri$NOI)\nveri$Thrd &lt;- as.factor(veri$Thrd)\nveri$SLI &lt;- as.factor(veri$SLI)\nveri$AUD &lt;- as.factor(veri$AUD)\nveri$Con &lt;- as.factor(veri$Con)\n\n# veriyi Satıs sütununa göre sıralama\nsatis_data &lt;- veri[order(veri$SAL, decreasing = TRUE),]\n\n# satıs sütununa göre sıralanan veriyi alma\nSatisAnaliz &lt;- subset(satis_data, select = c(\"Count\", \"SAL\", \"WtCns\",\"En\",\"NOI\"))\n\n# ggplot2 kütüphanesini yükleme\nlibrary(ggplot2) \n\n# Bar grafiğini çizelim (örneğin, enerji verimliliği için)\nbar=ggplot(SatisAnaliz,aes(x=SAL,y=WtCns,fill=Count))\nbar+geom_bar(stat=\"identity\")\n\n\n\n\n\n\n\nprint(bar)\n\n\n\n\n\n\n\n\n\n# Veri setini yukleme\nveri &lt;- read.csv(file = \"datalisted.csv\", head = TRUE, sep=\";\")\n\ntypeof(veri)\n\n[1] \"list\"\n\nveri$Size &lt;- as.factor(veri$Size)\nveri$GR &lt;- as.factor(veri$GR)\nveri$Count &lt;- as.factor(veri$Count)\nveri$Cons &lt;- as.factor(veri$Cons)\nveri$Height &lt;- as.factor(veri$Height)\nveri$Int &lt;- as.factor(veri$Int)\nveri$Col &lt;- as.factor(veri$Col)\nveri$Dis &lt;- as.factor(veri$Dis)\nveri$Time &lt;- as.factor(veri$Time)\nveri$WtCns &lt;- as.factor(veri$WtCns)\nveri$En &lt;- as.factor(veri$En)\nveri$Cap &lt;- as.factor(veri$Cap)\nveri$Mot &lt;- as.factor(veri$Mot)\nveri$Fast &lt;- as.factor(veri$Fast)\nveri$PRG &lt;- as.factor(veri$PRG)\nveri$NOI &lt;- as.factor(veri$NOI)\nveri$Thrd &lt;- as.factor(veri$Thrd)\nveri$SLI &lt;- as.factor(veri$SLI)\nveri$AUD &lt;- as.factor(veri$AUD)\nveri$Con &lt;- as.factor(veri$Con)\n\n# veriyi Satıs sütununa göre sıralama\nsatis_data &lt;- veri[order(veri$SAL, decreasing = TRUE),]\n\n\n# satıs sütununa göre sıralanan veriyi alma\nSatisAnaliz &lt;- subset(satis_data, select = c(\"Count\", \"SAL\", \"WtCns\",\"En\",\"NOI\"))\n\n# ggplot2 kütüphanesini yükleme\nlibrary(ggplot2) \n\n# Bar grafiğini çizelim (örneğin, enerji verimliliği için)\nbar=ggplot(SatisAnaliz,aes(x=SAL,y=WtCns,fill=Count))\nbar+geom_bar(stat=\"identity\",position=\"dodge\")+geom_text(aes(label=WtCns),colour=\"black\",position=position_dodge(0.9),size=3)\n\n\n\n\n\n\n\nprint(bar)"
   },
   {
     "objectID": "proje.html#data-source",
@@ -314,7 +314,7 @@
     "section": "",
     "text": "(Aşağıdakiler örnek olarak verilmiştir.)\nBu çalışmada 3 görevimiz var. Bu görevler….. Bunlara sırayla aşağıda cevap arıyoruz.",
     "crumbs": [
-      "Porfolyo",
+      "Portfolyo",
       "Çalışma 2"
     ]
   },
@@ -323,7 +323,7 @@
     "href": "portfolyo/calisma1.html",
     "title": "Calışma1",
     "section": "",
-    "text": "Bu Calışmada 3 görevimiz var. Bu görevler ;\nE\u001euan bu metni okuyorsanD1z yukarD1da listelenen ilk iki gC6revi doD\u001fru yapabilmiE\u001fiz demektir :) C\u001cC’C&lt;ncC&lt; gC6rev iC’in lC&lt;tfen okumaya devam edin :)\nC\u001cC’C&lt;ncC&lt; gC6rev iC’in listelediD\u001fimiz maddelere sD1rayla aE\u001faD\u001fD1da cevap arD1yoruz.",
+    "text": "Bu çalışmada 3 görevimiz var. Bu görevler ;\nŞuan bu metni okuyorsanız yukarıda listelenen ilk iki gC6revi doD\u001fru yapabilmiE\u001fiz demektir :) C\u001cC’C&lt;ncC&lt; gC6rev iC’in lC&lt;tfen okumaya devam edin :)\nC\u001cC’C&lt;ncC&lt; gC6rev iC’in listelediD\u001fimiz maddelere sD1rayla aE\u001faD\u001fD1da cevap arD1yoruz.",
     "crumbs": [
       "Portfolyo",
       "Calışma1"
@@ -346,9 +346,9 @@
   {
     "objectID": "proje.html#tercih-sebebi",
     "href": "proje.html#tercih-sebebi",
-    "title": "CTRL - NBA",
+    "title": "Bitirme Projesi",
     "section": "2.3 Tercih Sebebi",
-    "text": "2.3 Tercih Sebebi\nxxxxxx"
+    "text": "2.3 Tercih Sebebi\nNBA, dünya genelinde büyük bir popülerliğe sahip olan profesyonel bir spor ligi olduğundan, oyuncu istatistikleri ve özellikleri genellikle kapsamlı, güvenilir ve güncel veri kaynaklarına sahiptir. 2023-2024 sezonu ile filtreleyerek analizimiz için ideal bir veri seti sağladık.\nNBA oyuncuları hakkında toplanan veriler, oyuncuların performansını değerlendirmek için çeşitli değişkenleri içermektedir. Skor, asist, ribaund gibi performans ölçütlerinden; oyuncunun yaşı, boyu, kilosu gibi kişisel özelliklerine kadar geniş bir veri sunmuş, bu çeşitlilik ise farklı ilişkileri inceleme fırsatını yaratmıştır.\nBasketbol dünya genelinde milyonlarca insanı ilgilendiren bir spor dalıdır. Bu nedenle, geniş bir kitleye hitap edeceğini ve ilgi çekebileceğini düşündük. Bunun da projenin etkileşim ve geri bildirim potansiyelini arttırmasını umut ettik. Bu verileri kullanmak, spor analizi konusunda ilgili olan bireyler için -Aysu ve Anıl gibi- heyecan verici bir proje konusu olmuştur."
   },
   {
     "objectID": "proje.html#ön-işleme",
@@ -403,7 +403,7 @@
     "section": "(a)",
     "text": "(a)\n\n1 + 1\n\n[1] 2",
     "crumbs": [
-      "Porfolyo",
+      "Portfolyo",
       "Çalışma 2"
     ]
   },
@@ -414,7 +414,7 @@
     "section": "(b)",
     "text": "(b)",
     "crumbs": [
-      "Porfolyo",
+      "Portfolyo",
       "Çalışma 2"
     ]
   },
@@ -906,23 +906,23 @@
   {
     "objectID": "proje.html#veri-kaynadd1",
     "href": "proje.html#veri-kaynadd1",
-    "title": "CTRL - NBA",
+    "title": "Bitirme Projesi",
     "section": "2.1 Veri KaynaD\u001fD1",
-    "text": "2.1 Veri KaynaD\u001fD1\nxxxxxx"
+    "text": "2.1 Veri KaynaD\u001fD1\nhttps://www.basketball-reference.com/leagues/NBA_2024_totals.html sayfasD1ndan csv formatD1 ile C’ekildi. Ancak iliE\u001fki kuracaD\u001fD1mD1z alt baE\u001flD1klardan kilo ve boy verisi bu data setinde yer almıyordu. Bu sebeple Anıl ve Burak veriyi ön işlemeye tabi tuttu.\nhttps://www.nba.com/players sayfasD1ndan oyuncularD1n boy ve kilo verisi alD1ndı ve ana veri setine yeni bir sC&lt;tun olarak eklendi."
   },
   {
     "objectID": "proje.html#veri-hakkd1nda-genel-bilgiler",
     "href": "proje.html#veri-hakkd1nda-genel-bilgiler",
-    "title": "CTRL - NBA",
+    "title": "Bitirme Projesi",
     "section": "2.2 Veri HakkD1nda Genel Bilgiler",
-    "text": "2.2 Veri HakkD1nda Genel Bilgiler\nxxxxxx"
+    "text": "2.2 Veri HakkD1nda Genel Bilgiler\nNBA (National Basketball Association), dünya genelinde büyük bir popülerliğe sahip olan profesyonel basketbol liglerinden biridir. NBA’de yer alan takımlar, Amerika Birleşik Devletleri ve Kanada’da bulunan şehirleri temsil eder ve her sezon düzenlenen maçlar büyük bir izleyici kitlesi tarafından takip edilir.\nNBA oyuncu istatistikleri ve özellikleri, ligde yer alan oyuncuların performansını değerlendirmek ve takımların başarısını analiz etmek için kullanılan önemli veri setlerinden biridir. Bu veriler, genellikle sezon boyunca her oyuncunun oynadığı maçlardaki istatistikleri içerir ve aynı zamanda oyuncuların kişisel özelliklerini de kapsar.\nOyuncu istatistikleri genellikle şunları içerir:\nSkor: Oyuncunun maç başına attığı sayı. Asist: Oyuncunun maç başına yaptığı asist. Ribaund: Oyuncunun maç başına aldığı ribaund. Blok: Oyuncunun maç başına yaptığı blok. Top Çalma: Oyuncunun maç başına yaptığı top çalma. Saha İçi ve Saha Dışı Atış Yüzdeleri: Oyuncunun maç başına saha içi ve saha dışı atışlardan elde ettiği yüzde.\nBunların yanı sıra, oyuncu özellikleri de önemli bir role sahiptir. Oyuncu özellikleri genellikle şunları içerir:\nYaş: Oyuncunun yaşı. Boy: Oyuncunun boyu. Kilo: Oyuncunun kilosu. Pozisyon: Oyuncunun oynadığı pozisyon (örneğin, guard, forvet, pivot). Tecrübe: Oyuncunun ligdeki toplam tecrübesi (yıllar olarak).\nNBA oyuncu istatistikleri ve özellikleri spor analizi, oyuncu performansının değerlendirilmesi ve takım stratejilerinin oluşturulmasında önemli bir rol oynar. Bu veriler, hem spor endüstrisi uzmanları hem de basketbol severler için değerli bir kaynaktır ve geniş bir analiz ve araştırma alanı sunar."
   },
   {
     "objectID": "proje.html#cn-d0eleme",
     "href": "proje.html#cn-d0eleme",
-    "title": "CTRL - NBA",
+    "title": "Bitirme Projesi",
     "section": "2.4 C\u0016n D0E\u001fleme",
-    "text": "2.4 C\u0016n D0E\u001fleme\nxxxxxx"
+    "text": "2.4 C\u0016n D0E\u001fleme\nBazD1 veri setleri, analize hazD1r deD\u001fildi. Veri setlerini kullanabilmek iC’in C6nce C6n iE\u001flemeye ihtiyaC’ duyduk. Proje konumuz NBA oyuncularD1nD1n sezondaki C’eE\u001fitli istatististiklerine dayanD1yordu ancak hazD1r veri setleri yoktu. Bu yC&lt;zden NBA’in sitesinden yayD1nladD1D\u001fD1 istatistikleri projemizde kullanabilmek iC’in veri seti yani .csv formatD1nda excell dosyalarD1na C’evirdik.\nhttps://www.nba.com/players sayfasD1ndan ise 572 oyuncunun boy, kilo verisini ana veri setine yeni kolon olarak ekledik."
   },
   {
     "objectID": "proje.html#keeifsel-veri-analizi",
@@ -965,5 +965,96 @@
     "title": "CTRL - NBA",
     "section": "3.4 Asist/Top kaybı - Yaş",
     "text": "3.4 Asist/Top kaybı - Yaş\n. . ."
+  },
+  {
+    "objectID": "proje.html#su-tüketimleri---üretim-ve-ülke",
+    "href": "proje.html#su-tüketimleri---üretim-ve-ülke",
+    "title": "Bitirme Projesi",
+    "section": "",
+    "text": "# Veri setini yukleme\nveri &lt;- read.csv(file = \"datalisted.csv\", head = TRUE, sep=\";\")\n\nveri$Size &lt;- as.factor(veri$Size)\nveri$GR &lt;- as.factor(veri$GR)\nveri$Count &lt;- as.factor(veri$Count)\nveri$Cons &lt;- as.factor(veri$Cons)\nveri$Height &lt;- as.factor(veri$Height)\nveri$Int &lt;- as.factor(veri$Int)\nveri$Col &lt;- as.factor(veri$Col)\nveri$Dis &lt;- as.factor(veri$Dis)\nveri$Time &lt;- as.factor(veri$Time)\nveri$WtCns &lt;- as.factor(veri$WtCns)\nveri$En &lt;- as.factor(veri$En)\nveri$Cap &lt;- as.factor(veri$Cap)\nveri$Mot &lt;- as.factor(veri$Mot)\nveri$Fast &lt;- as.factor(veri$Fast)\nveri$PRG &lt;- as.factor(veri$PRG)\nveri$NOI &lt;- as.factor(veri$NOI)\nveri$Thrd &lt;- as.factor(veri$Thrd)\nveri$SLI &lt;- as.factor(veri$SLI)\nveri$AUD &lt;- as.factor(veri$AUD)\nveri$Con &lt;- as.factor(veri$Con)\n\n# veriyi Satıs sütununa göre sıralama\nsatis_data &lt;- veri[order(veri$SAL, decreasing = TRUE),]\n\n# satıs sütununa göre sıralanan veriyi alma\nSatisAnaliz &lt;- subset(satis_data, select = c(\"Count\", \"SAL\", \"WtCns\",\"En\",\"NOI\"))\n\n# ggplot2 kütüphanesini yükleme\nlibrary(ggplot2) \n\n# Bar grafiğini çizelim (örneğin, enerji verimliliği için)\nbar=ggplot(SatisAnaliz,aes(x=SAL,y=WtCns,fill=Count))\nbar+geom_bar(stat=\"identity\")\n\n\n\n\n\n\n\nprint(bar)\n\n\n\n\n\n\n\n\n\n# Veri setini yukleme\nveri &lt;- read.csv(file = \"datalisted.csv\", head = TRUE, sep=\";\")\n\ntypeof(veri)\n\n[1] \"list\"\n\nveri$Size &lt;- as.factor(veri$Size)\nveri$GR &lt;- as.factor(veri$GR)\nveri$Count &lt;- as.factor(veri$Count)\nveri$Cons &lt;- as.factor(veri$Cons)\nveri$Height &lt;- as.factor(veri$Height)\nveri$Int &lt;- as.factor(veri$Int)\nveri$Col &lt;- as.factor(veri$Col)\nveri$Dis &lt;- as.factor(veri$Dis)\nveri$Time &lt;- as.factor(veri$Time)\nveri$WtCns &lt;- as.factor(veri$WtCns)\nveri$En &lt;- as.factor(veri$En)\nveri$Cap &lt;- as.factor(veri$Cap)\nveri$Mot &lt;- as.factor(veri$Mot)\nveri$Fast &lt;- as.factor(veri$Fast)\nveri$PRG &lt;- as.factor(veri$PRG)\nveri$NOI &lt;- as.factor(veri$NOI)\nveri$Thrd &lt;- as.factor(veri$Thrd)\nveri$SLI &lt;- as.factor(veri$SLI)\nveri$AUD &lt;- as.factor(veri$AUD)\nveri$Con &lt;- as.factor(veri$Con)\n\n# veriyi Satıs sütununa göre sıralama\nsatis_data &lt;- veri[order(veri$SAL, decreasing = TRUE),]\n\n\n# satıs sütununa göre sıralanan veriyi alma\nSatisAnaliz &lt;- subset(satis_data, select = c(\"Count\", \"SAL\", \"WtCns\",\"En\",\"NOI\"))\n\n# ggplot2 kütüphanesini yükleme\nlibrary(ggplot2) \n\n# Bar grafiğini çizelim (örneğin, enerji verimliliği için)\nbar=ggplot(SatisAnaliz,aes(x=SAL,y=WtCns,fill=Count))\nbar+geom_bar(stat=\"identity\",position=\"dodge\")+geom_text(aes(label=WtCns),colour=\"black\",position=position_dodge(0.9),size=3)\n\n\n\n\n\n\n\nprint(bar)"
+  },
+  {
+    "objectID": "proje.html#giriş",
+    "href": "proje.html#giriş",
+    "title": "Bitirme Projesi",
+    "section": "1.1 Giriş",
+    "text": "1.1 Giriş\nBu çalışmada, enerji satış oranlarının farklı enerji türlerine göre dağılımı analiz edilmiştir. Analiz, satış verilerinin görselleştirilmesi ve belirli enerji türlerinin satış performanslarının incelenmesi yoluyla gerçekleştirilmiştir. Elde edilen bulgular, enerji türlerinin satış performanslarındaki farklılıkları ortaya koymuştur."
+  },
+  {
+    "objectID": "proje.html#yöntem",
+    "href": "proje.html#yöntem",
+    "title": "Bitirme Projesi",
+    "section": "1.2 Yöntem",
+    "text": "1.2 Yöntem\nVeri seti, belirli bir zaman aralığında farklı enerji türlerinin satış miktarlarını içermektedir. Veriler, ggplot2 ve dplyr kütüphaneleri kullanılarak analiz edilmiştir. Satış verileri, enerji türlerine göre sıralanmış ve box plot kullanılarak görselleştirilmiştir. Grafikler, satış oranlarının enerji türlerine göre dağılımını göstermektedir. Y ekseninin üst sınırı 0.10 olarak ayarlanarak grafikler üzerinde en yüksek değerlerin görselleştirilmesi sağlanmıştır."
+  },
+  {
+    "objectID": "proje.html#bulgular",
+    "href": "proje.html#bulgular",
+    "title": "Bitirme Projesi",
+    "section": "1.3 Bulgular",
+    "text": "1.3 Bulgular\nAnaliz sonucunda, F Enerji ve Tanımsız (Undefined) Enerji türlerinin diğer enerji türlerine kıyasla daha yüksek satış oranlarına sahip olduğu görülmüştür. Ayrıca, A Enerji türünün satışlarında belirgin bir artış olduğu tespit edilmiştir. D Enerji türü ise satış oranları açısından ortalamanın üzerinde bir performans sergilemiştir.\n\n# Veri setini yukleme\nveri &lt;- read.csv(file = \"datalisted.csv\", head = TRUE, sep=\";\")\n\ntypeof(veri)\n\n[1] \"list\"\n\nveri$Size &lt;- as.factor(veri$Size)\nveri$GR &lt;- as.factor(veri$GR)\nveri$Count &lt;- as.factor(veri$Count)\nveri$Cons &lt;- as.factor(veri$Cons)\nveri$Height &lt;- as.factor(veri$Height)\nveri$Int &lt;- as.factor(veri$Int)\nveri$Col &lt;- as.factor(veri$Col)\nveri$Dis &lt;- as.factor(veri$Dis)\nveri$Time &lt;- as.factor(veri$Time)\nveri$WtCns &lt;- as.factor(veri$WtCns)\nveri$En &lt;- as.factor(veri$En)\nveri$Cap &lt;- as.factor(veri$Cap)\nveri$Mot &lt;- as.factor(veri$Mot)\nveri$Fast &lt;- as.factor(veri$Fast)\nveri$PRG &lt;- as.factor(veri$PRG)\nveri$NOI &lt;- as.factor(veri$NOI)\nveri$Thrd &lt;- as.factor(veri$Thrd)\nveri$SLI &lt;- as.factor(veri$SLI)\nveri$AUD &lt;- as.factor(veri$AUD)\nveri$Con &lt;- as.factor(veri$Con)\n\n\n# veriyi Satıs sütununa göre sıralama\nsatis_data &lt;- veri[order(veri$SAL, decreasing = TRUE),]\n\n\n# satıs sütununa göre sıralanan veriyi alma\nSatisAnaliz &lt;- subset(satis_data, select = c(\"Count\", \"SAL\", \"WtCns\",\"En\",\"NOI\"))\n\n# ggplot2 kütüphanesini yükleme\nlibrary(ggplot2) \n\n# Plot\nggplot(SatisAnaliz, aes(x = En, y = SAL, fill = En)) +\n  geom_boxplot() +\n  geom_jitter(color = \"black\", size = 0.4, alpha = 0.9) +\n  theme_minimal() +\n  theme(\n    legend.position = \"none\",\n    plot.title = element_text(size = 11)\n  ) +\n  ggtitle(\"Enerji Satış Oranı Dağılımı\") +\n  xlab(\"\") \n\n\n\n\n\n\n\n\n\n# Veri setini yukleme\nveri &lt;- read.csv(file = \"datalisted.csv\", head = TRUE, sep=\";\")\n\ntypeof(veri)\n\n[1] \"list\"\n\nveri$Size &lt;- as.factor(veri$Size)\nveri$GR &lt;- as.factor(veri$GR)\nveri$Count &lt;- as.factor(veri$Count)\nveri$Cons &lt;- as.factor(veri$Cons)\nveri$Height &lt;- as.factor(veri$Height)\nveri$Int &lt;- as.factor(veri$Int)\nveri$Col &lt;- as.factor(veri$Col)\nveri$Dis &lt;- as.factor(veri$Dis)\nveri$Time &lt;- as.factor(veri$Time)\nveri$WtCns &lt;- as.factor(veri$WtCns)\nveri$En &lt;- as.factor(veri$En)\nveri$Cap &lt;- as.factor(veri$Cap)\nveri$Mot &lt;- as.factor(veri$Mot)\nveri$Fast &lt;- as.factor(veri$Fast)\nveri$PRG &lt;- as.factor(veri$PRG)\nveri$NOI &lt;- as.factor(veri$NOI)\nveri$Thrd &lt;- as.factor(veri$Thrd)\nveri$SLI &lt;- as.factor(veri$SLI)\nveri$AUD &lt;- as.factor(veri$AUD)\nveri$Con &lt;- as.factor(veri$Con)\n\n\n# veriyi Satıs sütununa göre sıralama\nsatis_data &lt;- veri[order(veri$SAL, decreasing = TRUE),]\n\n\n# satıs sütununa göre sıralanan veriyi alma\nSatisAnaliz &lt;- subset(satis_data, select = c(\"Count\", \"SAL\", \"WtCns\",\"En\",\"NOI\"))\n\n# ggplot2 kütüphanesini yükleme\nlibrary(ggplot2) \n\n# Grafik yüksekliği\n# Grafik genişliği\n# Plot\nggplot(SatisAnaliz, aes(x = En, y = SAL, fill = En)) +\n  geom_boxplot() +\n  geom_jitter(color = \"black\", size = 0.4, alpha = 0.9) +\n  theme_minimal() +\n  theme(\n    legend.position = \"none\",\n    plot.title = element_text(size = 11),\n    plot.width = 15,\n    plot.height = 15) +\n  ggtitle(\"Enerji Satış Oranı Dağılımı\") +\n  xlab(\"\") +facet_wrap(~ Count)\n\nWarning in plot_theme(plot): The `plot.width` theme element is not defined in\nthe element hierarchy.\n\n\nWarning in plot_theme(plot): The `plot.height` theme element is not defined in\nthe element hierarchy.\n\n\n\n\n\n\n\n\n\n\n# Veri setini yukleme\nveri &lt;- read.csv(file = \"datalisted.csv\", head = TRUE, sep=\";\")\n\ntypeof(veri)\n\n[1] \"list\"\n\nveri$Size &lt;- as.factor(veri$Size)\nveri$GR &lt;- as.factor(veri$GR)\nveri$Count &lt;- as.factor(veri$Count)\nveri$Cons &lt;- as.factor(veri$Cons)\nveri$Height &lt;- as.factor(veri$Height)\nveri$Int &lt;- as.factor(veri$Int)\nveri$Col &lt;- as.factor(veri$Col)\nveri$Dis &lt;- as.factor(veri$Dis)\nveri$Time &lt;- as.factor(veri$Time)\nveri$WtCns &lt;- as.factor(veri$WtCns)\nveri$En &lt;- as.factor(veri$En)\nveri$Cap &lt;- as.factor(veri$Cap)\nveri$Mot &lt;- as.factor(veri$Mot)\nveri$Fast &lt;- as.factor(veri$Fast)\nveri$PRG &lt;- as.factor(veri$PRG)\nveri$NOI &lt;- as.factor(veri$NOI)\nveri$Thrd &lt;- as.factor(veri$Thrd)\nveri$SLI &lt;- as.factor(veri$SLI)\nveri$AUD &lt;- as.factor(veri$AUD)\nveri$Con &lt;- as.factor(veri$Con)\n\n\n# veriyi Satıs sütununa göre sıralama\nsatis_data &lt;- veri[order(veri$SAL, decreasing = TRUE),]\n\n\n# satıs sütununa göre sıralanan veriyi alma\nSatisAnaliz &lt;- subset(satis_data, select = c(\"Count\", \"SAL\", \"WtCns\",\"En\",\"NOI\",\"Con\"))\n\n# ggplot2 kütüphanesini yükleme\nlibrary(ggplot2) \n\n#bubble graph\n\nggplot(SatisAnaliz, aes(x = SAL, y = Con, size = SAL, fill = Con)) +\n  geom_point(alpha = 0.6, shape = 21) +\n  scale_size(range = c(2, 10)) +\n  theme_minimal() +\n  theme(\n    legend.position = \"none\",\n    plot.title = element_text(size = 11)\n  ) +  # Virgülü buraya taşıdım\n  ggtitle(\"Connectivity Satış Oranı Dağılımı\") +\n  xlab(\"\") +\n  ylab(\"Satış Oranı\") +\n  facet_wrap(~ Count)  # Ülkeye göre grafikleri ayır"
+  },
+  {
+    "objectID": "docs/project.html",
+    "href": "docs/project.html",
+    "title": "Project X",
+    "section": "",
+    "text": "Welcome to my project page.\nKeep an eye on this space to stay updated with my project activities.\n(The titles below are provided as examples; please feel free to adjust them as necessary.)"
+  },
+  {
+    "objectID": "docs/project.html#data-source",
+    "href": "docs/project.html#data-source",
+    "title": "Project X",
+    "section": "2.1 Data Source",
+    "text": "2.1 Data Source\nxxxxxx"
+  },
+  {
+    "objectID": "docs/project.html#general-information-about-data",
+    "href": "docs/project.html#general-information-about-data",
+    "title": "Project X",
+    "section": "2.2 General Information About Data",
+    "text": "2.2 General Information About Data\nxxxxxx"
+  },
+  {
+    "objectID": "docs/project.html#reason-of-choice",
+    "href": "docs/project.html#reason-of-choice",
+    "title": "Project X",
+    "section": "2.3 Reason of Choice",
+    "text": "2.3 Reason of Choice\nxxxxxx"
+  },
+  {
+    "objectID": "docs/project.html#preprocessing",
+    "href": "docs/project.html#preprocessing",
+    "title": "Project X",
+    "section": "2.4 Preprocessing",
+    "text": "2.4 Preprocessing\nxxxxxx"
+  },
+  {
+    "objectID": "docs/project.html#exploratory-data-analysis",
+    "href": "docs/project.html#exploratory-data-analysis",
+    "title": "Project X",
+    "section": "3.1 Exploratory Data Analysis",
+    "text": "3.1 Exploratory Data Analysis\nxxxxxx"
+  },
+  {
+    "objectID": "docs/project.html#trend-analysis",
+    "href": "docs/project.html#trend-analysis",
+    "title": "Project X",
+    "section": "3.2 Trend Analysis",
+    "text": "3.2 Trend Analysis\nxxxxxx"
+  },
+  {
+    "objectID": "docs/project.html#model-fitting",
+    "href": "docs/project.html#model-fitting",
+    "title": "Project X",
+    "section": "3.3 Model Fitting",
+    "text": "3.3 Model Fitting\nxxxxxx"
+  },
+  {
+    "objectID": "docs/project.html#results",
+    "href": "docs/project.html#results",
+    "title": "Project X",
+    "section": "3.4 Results",
+    "text": "3.4 Results\nxxxxxx"
   }
 ]

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Code Busters Takımı Analitik Labı - CTRL - NBA</title>
+<title>Code Busters Takımı Analitik Labı - Bitirme Projesi</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -157,26 +157,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#proje-genel-bakışı-ve-kapsamı" id="toc-proje-genel-bakışı-ve-kapsamı" class="nav-link active" data-scroll-target="#proje-genel-bakışı-ve-kapsamı"><span class="header-section-number">1</span> Proje Genel Bakışı ve Kapsamı</a></li>
-  <li><a href="#veri" id="toc-veri" class="nav-link" data-scroll-target="#veri"><span class="header-section-number">2</span> Veri</a>
+  <li><a href="#su-tüketimleri---üretim-ve-ülke" id="toc-su-tüketimleri---üretim-ve-ülke" class="nav-link active" data-scroll-target="#su-tüketimleri---üretim-ve-ülke"><span class="header-section-number">0.1</span> Su Tüketimleri - Üretim ve Ülke</a></li>
+  <li><a href="#analiz" id="toc-analiz" class="nav-link" data-scroll-target="#analiz"><span class="header-section-number">1</span> Analiz</a>
   <ul class="collapse">
-  <li><a href="#veri-kaynağı" id="toc-veri-kaynağı" class="nav-link" data-scroll-target="#veri-kaynağı"><span class="header-section-number">2.1</span> Veri Kaynağı</a></li>
-  <li><a href="#veri-hakkında-genel-bilgiler" id="toc-veri-hakkında-genel-bilgiler" class="nav-link" data-scroll-target="#veri-hakkında-genel-bilgiler"><span class="header-section-number">2.2</span> Veri Hakkında Genel Bilgiler</a></li>
-  <li><a href="#tercih-sebebi" id="toc-tercih-sebebi" class="nav-link" data-scroll-target="#tercih-sebebi"><span class="header-section-number">2.3</span> Tercih Sebebi</a></li>
-  <li><a href="#ön-işleme" id="toc-ön-işleme" class="nav-link" data-scroll-target="#ön-işleme"><span class="header-section-number">2.4</span> Ön İşleme</a></li>
+  <li><a href="#giriş" id="toc-giriş" class="nav-link" data-scroll-target="#giriş"><span class="header-section-number">1.1</span> <strong>Giriş</strong></a></li>
+  <li><a href="#yöntem" id="toc-yöntem" class="nav-link" data-scroll-target="#yöntem"><span class="header-section-number">1.2</span> <strong>Yöntem</strong></a></li>
+  <li><a href="#bulgular" id="toc-bulgular" class="nav-link" data-scroll-target="#bulgular"><span class="header-section-number">1.3</span> <strong>Bulgular</strong></a></li>
   </ul></li>
-  <li><a href="#analiz" id="toc-analiz" class="nav-link" data-scroll-target="#analiz"><span class="header-section-number">3</span> Analiz</a>
-  <ul class="collapse">
-  <li><a href="#rebound---boy" id="toc-rebound---boy" class="nav-link" data-scroll-target="#rebound---boy"><span class="header-section-number">3.1</span> Rebound - Boy</a></li>
-  <li><a href="#block-sayısı---boy" id="toc-block-sayısı---boy" class="nav-link" data-scroll-target="#block-sayısı---boy"><span class="header-section-number">3.2</span> Block sayısı - Boy</a></li>
-  <li><a href="#asist---yaş" id="toc-asist---yaş" class="nav-link" data-scroll-target="#asist---yaş"><span class="header-section-number">3.3</span> Asist - Yaş</a></li>
-  <li><a href="#asisttop-kaybı---yaş" id="toc-asisttop-kaybı---yaş" class="nav-link" data-scroll-target="#asisttop-kaybı---yaş"><span class="header-section-number">3.4</span> Asist/Top kaybı - Yaş</a></li>
-  <li><a href="#keşifsel-veri-analizi" id="toc-keşifsel-veri-analizi" class="nav-link" data-scroll-target="#keşifsel-veri-analizi"><span class="header-section-number">3.5</span> Keşifsel Veri Analizi</a></li>
-  <li><a href="#trend-analizi" id="toc-trend-analizi" class="nav-link" data-scroll-target="#trend-analizi"><span class="header-section-number">3.6</span> Trend Analizi</a></li>
-  <li><a href="#model-uydurma" id="toc-model-uydurma" class="nav-link" data-scroll-target="#model-uydurma"><span class="header-section-number">3.7</span> Model Uydurma</a></li>
-  <li><a href="#sonuçlar" id="toc-sonuçlar" class="nav-link" data-scroll-target="#sonuçlar"><span class="header-section-number">3.8</span> Sonuçlar</a></li>
-  </ul></li>
-  <li><a href="#sonuçlar-ve-ana-çıkarımlar" id="toc-sonuçlar-ve-ana-çıkarımlar" class="nav-link" data-scroll-target="#sonuçlar-ve-ana-çıkarımlar"><span class="header-section-number">4</span> Sonuçlar ve Ana Çıkarımlar</a></li>
   </ul>
 </nav>
 </nav>
@@ -189,7 +176,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">CTRL - NBA</h1>
+<h1 class="title">Bitirme Projesi</h1>
 </div>
 
 
@@ -206,74 +193,45 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p><strong>Proje sayfamıza hoş geldiniz.</strong></p>
-<p><em>Projemizle ilgili güncellemelerden haberdar olmak için bu alanı takip edin.</em></p>
-<section id="proje-genel-bakışı-ve-kapsamı" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Proje Genel Bakışı ve Kapsamı</h1>
-<p>xxxxxx</p>
-</section>
-<section id="veri" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Veri</h1>
-<p>xxxxxx</p>
-<section id="veri-kaynağı" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="veri-kaynağı"><span class="header-section-number">2.1</span> Veri Kaynağı</h2>
-<p>https://www.basketball-reference.com/leagues/NBA_2024_totals.html sayfasından csv formatı ile çekilmiştir. Ancak ilişki kuracağımız alt başlıklardan kilo ve boy verisi bu data setinde verilmemiştir.</p>
-<p>https://www.nba.com/players sayfasından oyuncuların boy ve kilo verisi alınmış olup ana veri setine yeni sütun olarak eklenmiştir.</p>
-</section>
-<section id="veri-hakkında-genel-bilgiler" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="veri-hakkında-genel-bilgiler"><span class="header-section-number">2.2</span> Veri Hakkında Genel Bilgiler</h2>
-<p>xxxxxx</p>
-</section>
-<section id="tercih-sebebi" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="tercih-sebebi"><span class="header-section-number">2.3</span> Tercih Sebebi</h2>
-<p>xxxxxx</p>
-</section>
-<section id="ön-işleme" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="ön-işleme"><span class="header-section-number">2.4</span> Ön İşleme</h2>
-<p>Bazı veri setleri, analize hazır değildi. Veri setlerini kullanabilmek için önce ön işlemeye ihtiyaç duyduk. Proje konumuz NBA oyuncularının sezondaki çeşitli istatististiklerine dayanıyordu ancak hazır veri setleri yoktu. Bu yüzden NBA’in sitesinden yayınladığı istatistikleri projemizde kullanabilmek için veri seti yani .csv formatında excell dosyalarına çevirdik.</p>
-<p>https://www.nba.com/players sayfasından ise 572 oyuncunun boy, kilo verisini ana veri setine yeni kolon olarak ekledik.</p>
-</section>
-</section>
-<section id="analiz" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Analiz</h1>
-<p>Bu analizde NBA 2023-24 sezonundaki ilk 50’ye giren oyuncuların verileri kullanmıştır. İncelenecek alt başlıklar aşağıdaki gibidir:</p>
-<section id="rebound---boy" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="rebound---boy"><span class="header-section-number">3.1</span> Rebound - Boy</h2>
+<section id="su-tüketimleri---üretim-ve-ülke" class="level2" data-number="0.1">
+<h2 data-number="0.1" class="anchored" data-anchor-id="su-tüketimleri---üretim-ve-ülke"><span class="header-section-number">0.1</span> Su Tüketimleri - Üretim ve Ülke</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Veri setini yükleme</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>veri <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">"nba_dataset.csv"</span>, <span class="at">head =</span> <span class="cn">TRUE</span>, <span class="at">sep=</span><span class="st">";"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>boy_veri <span class="ot">&lt;-</span> veri[<span class="dv">1</span><span class="sc">:</span><span class="dv">150</span>,]</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#veriyi TRB sütununa göre sıralama</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>rebounds_data <span class="ot">&lt;-</span> veri[<span class="fu">order</span>(boy_veri<span class="sc">$</span>TRB, <span class="at">decreasing =</span> <span class="cn">TRUE</span>),]</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">#TRB sütununa göre sıralanan veriden ilk 50sini alma</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>rebounds_top50 <span class="ot">&lt;-</span> rebounds_data[<span class="dv">1</span><span class="sc">:</span><span class="dv">50</span>,]</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>TRB <span class="ot">&lt;-</span> rebounds_data[,<span class="fu">c</span>(<span class="st">"Player"</span>, <span class="st">"TRB"</span>)]</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>Height <span class="ot">&lt;-</span> rebounds_data[,<span class="fu">c</span>(<span class="st">"Player"</span>, <span class="st">"Height"</span>)]</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">#print(TRB,row.names = FALSE)</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.5
-✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ lubridate 1.9.3     ✔ tibble    3.2.1
-✔ purrr     1.0.2     ✔ tidyr     1.3.1
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dslabs)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>boy_veri <span class="sc">|&gt;</span> <span class="fu">ggplot</span>()<span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> Height, <span class="at">y =</span> TRB), <span class="at">size =</span> <span class="dv">2</span>)<span class="sc">+</span> <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="fl">1.7</span>, <span class="fl">2.3</span>)) <span class="sc">+</span><span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">150</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 59 rows containing missing values or values outside the scale range
-(`geom_point()`).</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Veri setini yukleme</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>veri <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">"datalisted.csv"</span>, <span class="at">head =</span> <span class="cn">TRUE</span>, <span class="at">sep=</span><span class="st">";"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Size <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Size)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>GR <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>GR)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Count <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Count)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Cons <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Cons)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Height <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Height)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Int <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Int)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Col <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Col)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Dis <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Dis)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Time <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Time)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>WtCns <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>WtCns)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>En <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>En)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Cap <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Cap)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Mot <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Mot)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Fast <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Fast)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>PRG <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>PRG)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>NOI <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>NOI)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Thrd <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Thrd)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>SLI <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>SLI)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>AUD <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>AUD)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Con <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Con)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co"># veriyi Satıs sütununa göre sıralama</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>satis_data <span class="ot">&lt;-</span> veri[<span class="fu">order</span>(veri<span class="sc">$</span>SAL, <span class="at">decreasing =</span> <span class="cn">TRUE</span>),]</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co"># satıs sütununa göre sıralanan veriyi alma</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>SatisAnaliz <span class="ot">&lt;-</span> <span class="fu">subset</span>(satis_data, <span class="at">select =</span> <span class="fu">c</span>(<span class="st">"Count"</span>, <span class="st">"SAL"</span>, <span class="st">"WtCns"</span>,<span class="st">"En"</span>,<span class="st">"NOI"</span>))</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co"># ggplot2 kütüphanesini yükleme</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) </span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Bar grafiğini çizelim (örneğin, enerji verimliliği için)</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>bar<span class="ot">=</span><span class="fu">ggplot</span>(SatisAnaliz,<span class="fu">aes</span>(<span class="at">x=</span>SAL,<span class="at">y=</span>WtCns,<span class="at">fill=</span>Count))</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>bar<span class="sc">+</span><span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"identity"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -281,57 +239,282 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 </div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(bar)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="proje_files/figure-html/unnamed-chunk-1-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
 </div>
-<p>Bu grafikte boy arttıkça rebound sayısının arttığını gözlemledik. Beklenen sonuç da buydu. Ancak grafikten çıkarılması gereken bir diğer sonuç ise 1.9 - 2.1 uzunluğundaki oyuncuların 60 TRB değerinin altında kalan kümesi. Bu oyuncular uzun olmasına rağmen diğer oyunculara göre düşük performans sergilemişler. Bir sonraki başlıkta bu kümenin yaş ve kilo ile grafiğine bakıp bunların sebep olma ihtimalini inceleyeceğiz.</p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Veri setini yukleme</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>veri <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">"datalisted.csv"</span>, <span class="at">head =</span> <span class="cn">TRUE</span>, <span class="at">sep=</span><span class="st">";"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(veri)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "list"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Size <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Size)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>GR <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>GR)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Count <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Count)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Cons <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Cons)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Height <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Height)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Int <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Int)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Col <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Col)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Dis <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Dis)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Time <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Time)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>WtCns <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>WtCns)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>En <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>En)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Cap <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Cap)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Mot <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Mot)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Fast <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Fast)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>PRG <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>PRG)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>NOI <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>NOI)</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Thrd <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Thrd)</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>SLI <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>SLI)</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>AUD <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>AUD)</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Con <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Con)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="co"># veriyi Satıs sütununa göre sıralama</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>satis_data <span class="ot">&lt;-</span> veri[<span class="fu">order</span>(veri<span class="sc">$</span>SAL, <span class="at">decreasing =</span> <span class="cn">TRUE</span>),]</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="co"># satıs sütununa göre sıralanan veriyi alma</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>SatisAnaliz <span class="ot">&lt;-</span> <span class="fu">subset</span>(satis_data, <span class="at">select =</span> <span class="fu">c</span>(<span class="st">"Count"</span>, <span class="st">"SAL"</span>, <span class="st">"WtCns"</span>,<span class="st">"En"</span>,<span class="st">"NOI"</span>))</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="co"># ggplot2 kütüphanesini yükleme</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) </span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Bar grafiğini çizelim (örneğin, enerji verimliliği için)</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>bar<span class="ot">=</span><span class="fu">ggplot</span>(SatisAnaliz,<span class="fu">aes</span>(<span class="at">x=</span>SAL,<span class="at">y=</span>WtCns,<span class="at">fill=</span>Count))</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>bar<span class="sc">+</span><span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"identity"</span>,<span class="at">position=</span><span class="st">"dodge"</span>)<span class="sc">+</span><span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label=</span>WtCns),<span class="at">colour=</span><span class="st">"black"</span>,<span class="at">position=</span><span class="fu">position_dodge</span>(<span class="fl">0.9</span>),<span class="at">size=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="proje_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(bar)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="proje_files/figure-html/unnamed-chunk-2-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
-<section id="block-sayısı---boy" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="block-sayısı---boy"><span class="header-section-number">3.2</span> Block sayısı - Boy</h2>
+<section id="analiz" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Analiz</h1>
+<p>Bu analizde NBA 2023-24 sezonundaki ilk 50’ye giren oyuncularD1n verileri kullanmD1EtD1r. D0ncelenecek alt baElD1klar aEaDD1daki gibidir:</p>
+<section id="giriş" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="giriş"><span class="header-section-number">1.1</span> <strong>Giriş</strong></h2>
+<p>Bu çalışmada, enerji satış oranlarının farklı enerji türlerine göre dağılımı analiz edilmiştir. Analiz, satış verilerinin görselleştirilmesi ve belirli enerji türlerinin satış performanslarının incelenmesi yoluyla gerçekleştirilmiştir. Elde edilen bulgular, enerji türlerinin satış performanslarındaki farklılıkları ortaya koymuştur.</p>
 </section>
-<section id="asist---yaş" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="asist---yaş"><span class="header-section-number">3.3</span> Asist - Yaş</h2>
+<section id="yöntem" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="yöntem"><span class="header-section-number">1.2</span> <strong>Yöntem</strong></h2>
+<p>Veri seti, belirli bir zaman aralığında farklı enerji türlerinin satış miktarlarını içermektedir. Veriler, <strong><code>ggplot2</code></strong> ve <strong><code>dplyr</code></strong> kütüphaneleri kullanılarak analiz edilmiştir. Satış verileri, enerji türlerine göre sıralanmış ve box plot kullanılarak görselleştirilmiştir. Grafikler, satış oranlarının enerji türlerine göre dağılımını göstermektedir. Y ekseninin üst sınırı 0.10 olarak ayarlanarak grafikler üzerinde en yüksek değerlerin görselleştirilmesi sağlanmıştır.</p>
 </section>
-<section id="asisttop-kaybı---yaş" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="asisttop-kaybı---yaş"><span class="header-section-number">3.4</span> Asist/Top kaybı - Yaş</h2>
-<p>. . .</p>
-</section>
-<section id="keşifsel-veri-analizi" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="keşifsel-veri-analizi"><span class="header-section-number">3.5</span> Keşifsel Veri Analizi</h2>
-<p>Keşifsel veri analizi, veri setlerini inceleyerek içerdikleri bilgiyi anlamak ve veri hakkında sezgisel bir anlayış geliştirmek için kullanılan bir süreçtir. Bu süreç, veri setlerinin yapılarını, eğilimlerini, ilişkilerini ve desenlerini keşfetmeyi amaçlar.</p>
-<p>Projeye başlamadan önce inelediğimiz veri setleri hakkında bazı beklentilerimiz vardı. Mesela boyu uzun olan oyuncuların rebound ortalaması daha yüksek olmalıydı. Alt başlıkları bu beklentilerimiz üzerine oluşturduk. Beklentimizi kanıtlamak bir amaçken bir yandan da bu beklentilerimizi şaşırtacak çeşitli oyuncular olacağının farkındaydık. Ne de olsa NBA :) Bu da bizlere outliersları gösterecekti.</p>
-<p>Veri keşfi ve gözlemi yaptıktan sonra kullanacağımız veri setlerini bulup incelemeye başladık. Proje için inceleyeceğimiz hedef kitlemizi belirledik ( 23-24 Sezonu, en iyi ilk 50 oyuncu ).</p>
-<p>Sonrasında Veri görselleştirme ile veriyi daha okunur kılmaya çalıştık.Bunun için incelediğimiz veriye göre çeşitli plotlar seçmeliydik. En optimum plotu seçmeye gayret gösterdik. (Modelleme öncesi analiz)</p>
-<p>Keşifsel modelleme üzerinde çok zaman kaybetmedik. Çünkü R studio veri için en optimum yani en uygun plotu seçenek olarak sundu.</p>
-<p>Daha sonrasında sonuçları ilgili başlıkların altında paylaştık.</p>
-</section>
-<section id="trend-analizi" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="trend-analizi"><span class="header-section-number">3.6</span> Trend Analizi</h2>
-<p>/chatgptden baktım bunu uygularken tekrar konusalım/ Trend analizi, belirli bir zaman dilimindeki veri setlerindeki uzun vadeli eğilimleri belirlemek için kullanılan bir analiz yöntemidir. Bu analiz, veri setindeki değişkenlerin zamanla nasıl değiştiğini inceleyerek gelecekteki davranışlar hakkında tahminler yapmaya yardımcı olur.</p>
-<p>Trend analizinde genellikle zaman serisi verileri kullanılır. Temel olarak, zaman serisi verileri, belirli bir zaman diliminde belirli aralıklarla ölçülen veya gözlenen verilerdir (örneğin, aylık satış rakamları, günlük hisse senedi fiyatları). Bu veriler, bir trendin varlığını ve bu trendin ne yönde olduğunu belirlemek için analiz edilir.</p>
-<p>Trend analizi genellikle şu adımları içerir:</p>
-<p>Veri Görselleştirme: Zaman serisi verileri grafiğe dökülür. Bu, verinin nasıl davrandığını görsel olarak görmemize olanak tanır. Grafik üzerinde belirli bir eğilim olduğu gözlemlenebilir. Trendin Belirlenmesi: Veri setindeki eğilimin ne olduğunu belirlemek için çeşitli istatistiksel yöntemler kullanılır. Bu, veri setindeki değişkenliğin sabit bir eğilimle artıp artmadığını veya azaldığını belirler. Trendin Uygun Modellemesi: Veri setinin yapısına ve belirlenen trende bağlı olarak uygun bir model seçilir. Doğrusal, üstel veya polinomiyal trendler gibi farklı modeller kullanılabilir. Trendin Tahmin Edilmesi: Belirlenen trend modeli kullanılarak gelecekteki değerler tahmin edilir. Bu, trendin devam edip etmeyeceği veya tersine dönüp dönmediği hakkında fikir verebilir. Trend analizi, çeşitli endüstrilerde pazar trendlerini, tüketici davranışlarını, finansal piyasaları ve daha fazlasını anlamak için kullanılır. Örneğin, bir şirketin satışlarını analiz ederek gelecekteki satış trendlerini tahmin etmek veya bir yatırımcının belirli bir hisse senedinin fiyatının gelecekteki trendini belirlemek için trend analizi yapılabilir.</p>
-</section>
-<section id="model-uydurma" class="level2" data-number="3.7">
-<h2 data-number="3.7" class="anchored" data-anchor-id="model-uydurma"><span class="header-section-number">3.7</span> Model Uydurma</h2>
-<p>chtagptden aldım bu aşamaya geldıgımızde tekrar konusalım Model uydurma (fitting), istatistik ve makine öğrenimi alanlarında bir modelin veriye uyum sağlaması veya veriyi en iyi şekilde açıklaması anlamına gelir. Bu, modelin gözlemlenen verilere ne kadar iyi uymakta olduğunu ifade eder.</p>
-<p>Model uydurma genellikle şu adımları içerir:</p>
-<ol type="1">
-<li><p><strong>Model Seçimi</strong>: İncelenen veri seti için uygun bir model seçilir. Bu model, veri setinin yapısına ve hedeflenen sonuca bağlı olarak belirlenir. Örneğin, doğrusal regresyon, lojistik regresyon, karar ağaçları, destek vektör makineleri gibi çeşitli modeller arasından bir seçim yapılabilir.</p></li>
-<li><p><strong>Model Parametrelerinin Belirlenmesi</strong>: Seçilen modelin parametreleri belirlenir veya tahmin edilir. Bu parametreler, modelin veriye ne kadar iyi uyduğunu belirler. Bazı modellerde bu parametreler manuel olarak ayarlanabilirken, bazıları otomatik olarak ayarlanır.</p></li>
-<li><p><strong>Model Uydurma</strong>: Model, veri setine uydurulur. Bu, modelin gözlemlenen verilere ne kadar iyi uyduğunu ifade eder. Modelin parametreleri, veri setindeki gözlemlenen değerlerle uyumlu hale getirilir.</p></li>
-<li><p><strong>Model Değerlendirme</strong>: Uydurulan modelin performansı değerlendirilir. Bu, modelin ne kadar iyi olduğunu ve tahmin yeteneğini belirler. Doğruluk, hassasiyet, belirlilik katsayısı gibi metrikler kullanılarak değerlendirme yapılır.</p></li>
-</ol>
-<p>Model uydurma, veri setindeki desenleri ve ilişkileri açıklamak ve gelecekteki davranışları tahmin etmek için kullanılır. İyi bir model, veri setindeki değişkenliği ve yapıyı doğru bir şekilde yakalar ve bu sayede gelecekteki değerlerin tahmininde daha doğru sonuçlar verir. Ancak model uydurma sürecinde aşırı uydurma (overfitting) riski de vardır, bu da modelin eğitim verilerine çok iyi uyması ancak genelleme yapma yeteneğinin azalması anlamına gelir. Bu nedenle, modelin aşırı uydurma yapmaması için düzenleme teknikleri ve doğrulama yöntemleri kullanılır.</p>
-</section>
-<section id="sonuçlar" class="level2" data-number="3.8">
-<h2 data-number="3.8" class="anchored" data-anchor-id="sonuçlar"><span class="header-section-number">3.8</span> Sonuçlar</h2>
-<p>xxxxxx</p>
-</section>
-</section>
-<section id="sonuçlar-ve-ana-çıkarımlar" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Sonuçlar ve Ana Çıkarımlar</h1>
-<p>xxxxxx</p>
+<section id="bulgular" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="bulgular"><span class="header-section-number">1.3</span> <strong>Bulgular</strong></h2>
+<p>Analiz sonucunda, F Enerji ve Tanımsız (Undefined) Enerji türlerinin diğer enerji türlerine kıyasla daha yüksek satış oranlarına sahip olduğu görülmüştür. Ayrıca, A Enerji türünün satışlarında belirgin bir artış olduğu tespit edilmiştir. D Enerji türü ise satış oranları açısından ortalamanın üzerinde bir performans sergilemiştir.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Veri setini yukleme</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>veri <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">"datalisted.csv"</span>, <span class="at">head =</span> <span class="cn">TRUE</span>, <span class="at">sep=</span><span class="st">";"</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(veri)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "list"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Size <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Size)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>GR <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>GR)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Count <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Count)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Cons <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Cons)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Height <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Height)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Int <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Int)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Col <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Col)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Dis <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Dis)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Time <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Time)</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>WtCns <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>WtCns)</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>En <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>En)</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Cap <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Cap)</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Mot <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Mot)</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Fast <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Fast)</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>PRG <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>PRG)</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>NOI <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>NOI)</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Thrd <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Thrd)</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>SLI <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>SLI)</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>AUD <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>AUD)</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Con <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Con)</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="co"># veriyi Satıs sütununa göre sıralama</span></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>satis_data <span class="ot">&lt;-</span> veri[<span class="fu">order</span>(veri<span class="sc">$</span>SAL, <span class="at">decreasing =</span> <span class="cn">TRUE</span>),]</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="co"># satıs sütununa göre sıralanan veriyi alma</span></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>SatisAnaliz <span class="ot">&lt;-</span> <span class="fu">subset</span>(satis_data, <span class="at">select =</span> <span class="fu">c</span>(<span class="st">"Count"</span>, <span class="st">"SAL"</span>, <span class="st">"WtCns"</span>,<span class="st">"En"</span>,<span class="st">"NOI"</span>))</span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a><span class="co"># ggplot2 kütüphanesini yükleme</span></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) </span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(SatisAnaliz, <span class="fu">aes</span>(<span class="at">x =</span> En, <span class="at">y =</span> SAL, <span class="at">fill =</span> En)) <span class="sc">+</span></span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">color =</span> <span class="st">"black"</span>, <span class="at">size =</span> <span class="fl">0.4</span>, <span class="at">alpha =</span> <span class="fl">0.9</span>) <span class="sc">+</span></span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">11</span>)</span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Enerji Satış Oranı Dağılımı"</span>) <span class="sc">+</span></span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">""</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="proje_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Veri setini yukleme</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>veri <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">"datalisted.csv"</span>, <span class="at">head =</span> <span class="cn">TRUE</span>, <span class="at">sep=</span><span class="st">";"</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(veri)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "list"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Size <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Size)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>GR <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>GR)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Count <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Count)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Cons <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Cons)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Height <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Height)</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Int <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Int)</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Col <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Col)</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Dis <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Dis)</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Time <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Time)</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>WtCns <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>WtCns)</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>En <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>En)</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Cap <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Cap)</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Mot <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Mot)</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Fast <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Fast)</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>PRG <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>PRG)</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>NOI <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>NOI)</span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Thrd <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Thrd)</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>SLI <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>SLI)</span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>AUD <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>AUD)</span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Con <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Con)</span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a><span class="co"># veriyi Satıs sütununa göre sıralama</span></span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>satis_data <span class="ot">&lt;-</span> veri[<span class="fu">order</span>(veri<span class="sc">$</span>SAL, <span class="at">decreasing =</span> <span class="cn">TRUE</span>),]</span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a><span class="co"># satıs sütununa göre sıralanan veriyi alma</span></span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a>SatisAnaliz <span class="ot">&lt;-</span> <span class="fu">subset</span>(satis_data, <span class="at">select =</span> <span class="fu">c</span>(<span class="st">"Count"</span>, <span class="st">"SAL"</span>, <span class="st">"WtCns"</span>,<span class="st">"En"</span>,<span class="st">"NOI"</span>))</span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a><span class="co"># ggplot2 kütüphanesini yükleme</span></span>
+<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) </span>
+<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Grafik yüksekliği</span></span>
+<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Grafik genişliği</span></span>
+<span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
+<span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(SatisAnaliz, <span class="fu">aes</span>(<span class="at">x =</span> En, <span class="at">y =</span> SAL, <span class="at">fill =</span> En)) <span class="sc">+</span></span>
+<span id="cb12-37"><a href="#cb12-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb12-38"><a href="#cb12-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">color =</span> <span class="st">"black"</span>, <span class="at">size =</span> <span class="fl">0.4</span>, <span class="at">alpha =</span> <span class="fl">0.9</span>) <span class="sc">+</span></span>
+<span id="cb12-39"><a href="#cb12-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb12-40"><a href="#cb12-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb12-41"><a href="#cb12-41" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
+<span id="cb12-42"><a href="#cb12-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">11</span>),</span>
+<span id="cb12-43"><a href="#cb12-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.width =</span> <span class="dv">15</span>,</span>
+<span id="cb12-44"><a href="#cb12-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.height =</span> <span class="dv">15</span>) <span class="sc">+</span></span>
+<span id="cb12-45"><a href="#cb12-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Enerji Satış Oranı Dağılımı"</span>) <span class="sc">+</span></span>
+<span id="cb12-46"><a href="#cb12-46" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span><span class="fu">facet_wrap</span>(<span class="sc">~</span> Count)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in plot_theme(plot): The `plot.width` theme element is not defined in
+the element hierarchy.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in plot_theme(plot): The `plot.height` theme element is not defined in
+the element hierarchy.</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="proje_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Veri setini yukleme</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>veri <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">"datalisted.csv"</span>, <span class="at">head =</span> <span class="cn">TRUE</span>, <span class="at">sep=</span><span class="st">";"</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(veri)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "list"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Size <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Size)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>GR <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>GR)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Count <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Count)</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Cons <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Cons)</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Height <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Height)</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Int <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Int)</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Col <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Col)</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Dis <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Dis)</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Time <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Time)</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>WtCns <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>WtCns)</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>En <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>En)</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Cap <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Cap)</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Mot <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Mot)</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Fast <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Fast)</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>PRG <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>PRG)</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>NOI <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>NOI)</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Thrd <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Thrd)</span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>SLI <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>SLI)</span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>AUD <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>AUD)</span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>veri<span class="sc">$</span>Con <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(veri<span class="sc">$</span>Con)</span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a><span class="co"># veriyi Satıs sütununa göre sıralama</span></span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>satis_data <span class="ot">&lt;-</span> veri[<span class="fu">order</span>(veri<span class="sc">$</span>SAL, <span class="at">decreasing =</span> <span class="cn">TRUE</span>),]</span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a><span class="co"># satıs sütununa göre sıralanan veriyi alma</span></span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a>SatisAnaliz <span class="ot">&lt;-</span> <span class="fu">subset</span>(satis_data, <span class="at">select =</span> <span class="fu">c</span>(<span class="st">"Count"</span>, <span class="st">"SAL"</span>, <span class="st">"WtCns"</span>,<span class="st">"En"</span>,<span class="st">"NOI"</span>,<span class="st">"Con"</span>))</span>
+<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-30"><a href="#cb17-30" aria-hidden="true" tabindex="-1"></a><span class="co"># ggplot2 kütüphanesini yükleme</span></span>
+<span id="cb17-31"><a href="#cb17-31" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) </span>
+<span id="cb17-32"><a href="#cb17-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-33"><a href="#cb17-33" aria-hidden="true" tabindex="-1"></a><span class="co">#bubble graph</span></span>
+<span id="cb17-34"><a href="#cb17-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-35"><a href="#cb17-35" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(SatisAnaliz, <span class="fu">aes</span>(<span class="at">x =</span> SAL, <span class="at">y =</span> Con, <span class="at">size =</span> SAL, <span class="at">fill =</span> Con)) <span class="sc">+</span></span>
+<span id="cb17-36"><a href="#cb17-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.6</span>, <span class="at">shape =</span> <span class="dv">21</span>) <span class="sc">+</span></span>
+<span id="cb17-37"><a href="#cb17-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_size</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">10</span>)) <span class="sc">+</span></span>
+<span id="cb17-38"><a href="#cb17-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb17-39"><a href="#cb17-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb17-40"><a href="#cb17-40" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
+<span id="cb17-41"><a href="#cb17-41" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">11</span>)</span>
+<span id="cb17-42"><a href="#cb17-42" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span>  <span class="co"># Virgülü buraya taşıdım</span></span>
+<span id="cb17-43"><a href="#cb17-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Connectivity Satış Oranı Dağılımı"</span>) <span class="sc">+</span></span>
+<span id="cb17-44"><a href="#cb17-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span></span>
+<span id="cb17-45"><a href="#cb17-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Satış Oranı"</span>) <span class="sc">+</span></span>
+<span id="cb17-46"><a href="#cb17-46" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> Count)  <span class="co"># Ülkeye göre grafikleri ayır</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="proje_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
