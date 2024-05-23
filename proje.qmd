@@ -436,62 +436,100 @@ ggplot(A_energy, aes(x = SAL23, y = NOI, size = SAL23, fill = NOI)) +
 
 D Enerji için Ses
 
-```{r}
-# Veri setini yukleme
-veri <- read.csv(file = "datalisted.csv", head = TRUE, sep=";")
+\# Veri setini yukleme
 
-veri$Size <- as.factor(veri$Size)
-veri$GR <- as.factor(veri$GR)
-veri$Count <- as.factor(veri$Count)
-veri$Cons <- as.factor(veri$Cons)
-veri$Col <- as.factor(veri$Col)
-veri$Dis <- as.factor(veri$Dis)
-veri$Time <- as.factor(veri$Time)
-veri$WtCns <- as.factor(veri$WtCns)
-veri$En <- as.factor(veri$En)
-veri$Cap <- as.factor(veri$Cap)
-veri$Fast <- as.factor(veri$Fast)
-veri$PRG <- as.factor(veri$PRG)
-veri$NOI <- as.factor(veri$NOI)
-veri$Thrd <- as.factor(veri$Thrd)
-veri$SLI <- as.factor(veri$SLI)
-veri$AUD <- as.factor(veri$AUD)
-veri$Con <- as.factor(veri$Con)
-veri$SAL22 <- gsub(",", ".", veri$SAL22)
-veri$SAL23 <- gsub(",", ".", veri$SAL23)
-veri$SAL22 <- as.numeric(veri$SAL22)
-veri$SAL23 <- as.numeric(veri$SAL23)
+veri \<- read.csv(file = "datalisted.csv", head = TRUE, sep=";")
 
+veri\$Size \<- as.factor(veri\$Size)
 
-# veriyi Satıs sütununa göre sıralama
-satis_data <- veri[order(veri$SAL23, decreasing = TRUE),]
+veri\$GR \<- as.factor(veri\$GR)
 
-# satıs sütununa göre sıralanan veriyi alma
-SatisAnaliz <- subset(satis_data, select = c("Count", "Con","SAL23","SAL22", "WtCns","En","NOI"))
+veri\$Count \<- as.factor(veri\$Count)
 
-# dplyr paketini yükleme
+veri\$Cons \<- as.factor(veri\$Cons)
+
+veri\$Col \<- as.factor(veri\$Col)
+
+veri\$Dis \<- as.factor(veri\$Dis)
+
+veri\$Time \<- as.factor(veri\$Time)
+
+veri\$WtCns \<- as.factor(veri\$WtCns)
+
+veri\$En \<- as.factor(veri\$En)
+
+veri\$Cap \<- as.factor(veri\$Cap)
+
+veri\$Fast \<- as.factor(veri\$Fast)
+
+veri\$PRG \<- as.factor(veri\$PRG)
+
+veri\$NOI \<- as.factor(veri\$NOI)
+
+veri\$Thrd \<- as.factor(veri\$Thrd)
+
+veri\$SLI \<- as.factor(veri\$SLI)
+
+veri\$AUD \<- as.factor(veri\$AUD)
+
+veri\$Con \<- as.factor(veri\$Con)
+
+veri\$SAL22 \<- gsub(",", ".", veri\$SAL22)
+
+veri\$SAL23 \<- gsub(",", ".", veri\$SAL23)
+
+veri\$SAL22 \<- as.numeric(veri\$SAL22)
+
+veri\$SAL23 \<- as.numeric(veri\$SAL23)
+
+\# veriyi Satıs sütununa göre sıralama
+
+satis_data \<- veri\[order(veri\$SAL23, decreasing = TRUE),\]
+
+\# satıs sütununa göre sıralanan veriyi alma
+
+SatisAnaliz \<- subset(satis_data, select = c("Count", "Con","SAL23","SAL22", "WtCns","En","NOI"))
+
+\# dplyr paketini yükleme
+
 library(dplyr)
+
 library(tidyr)
-library(ggplot2) 
+
+library(ggplot2)
+
 library(scales)
 
-# D Energy ait verileri filtreleme
-D_energy <- filter(SatisAnaliz, En == "D")
+\# D Energy ait verileri filtreleme
 
+D_energy \<- filter(SatisAnaliz, En == "D")
 
 #bubble graph
 
 ggplot(D_energy, aes(x = SAL23, y = NOI, size = SAL23, fill = NOI)) +
-  geom_point(alpha = 0.6, shape = 21) +
-  scale_size(range = c(2, 10)) +
-  theme_minimal() +
-  theme(
-    legend.position = "none",
-    plot.title = element_text(size = 11)
-  ) +  # Virgülü buraya taşıdım
-  ggtitle("Ses Seviyesi-Satış Oranı Dağılımı") +
-  xlab("Satış") +
-  ylab("DbA")
+
+geom_point(alpha = 0.6, shape = 21) +
+
+scale_size(range = c(2, 10)) +
+
+theme_minimal() +
+
+theme(
+
+legend.position = "none",
+
+plot.title = element_text(size = 11)
+
+) + \# Virgülü buraya taşıdım
+
+ggtitle("Ses Seviyesi-Satış Oranı Dağılımı") +
+
+xlab("Satış") +
+
+ylab("DbA")
+
+```{r}
+
 ```
 
 ÜLke bazlı D Enerji Ses
@@ -555,7 +593,7 @@ ggplot(D_energy, aes(x = SAL23, y = NOI, size = SAL23, fill = NOI)) +
   facet_wrap(~ Count)  # Ülkeye göre grafikleri ayır
 ```
 
-Su Tüketimleri İncelemesi
+D Enerji Su Tüketimleri İncelemesi
 
 ```{r}
 # Veri setini yukleme
@@ -596,13 +634,13 @@ library(tidyr)
 library(ggplot2) 
 library(scales)
 
-# A Energy ait verileri filtreleme
-A_energy <- filter(SatisAnaliz, En == "A")
+# D Energy ait verileri filtreleme
+D_energy <- filter(SatisAnaliz, En == "D")
 
 
 #bubble graph
 
-ggplot(A_energy, aes(x = SAL23, y = WtCns, size = SAL23, fill = WtCns)) +
+ggplot(D_energy, aes(x = SAL23, y = WtCns, size = SAL23, fill = WtCns)) +
   geom_point(alpha = 0.6, shape = 21) +
   scale_size(range = c(2, 10)) +
   theme_minimal() +
@@ -655,13 +693,13 @@ library(tidyr)
 library(ggplot2) 
 library(scales)
 
-# A Energy ait verileri filtreleme
-A_energy <- filter(SatisAnaliz, En == "A")
+# D Energy ait verileri filtreleme
+D_energy <- filter(SatisAnaliz, En == "D")
 
 
 #bubble graph
 
-ggplot(A_energy, aes(x = SAL23, y = WtCns, size = SAL23, fill = WtCns)) +
+ggplot(D_energy, aes(x = SAL23, y = WtCns, size = SAL23, fill = WtCns)) +
   geom_point(alpha = 0.6, shape = 21) +
   scale_size(range = c(2, 10)) +
   theme_minimal() +
@@ -799,7 +837,68 @@ ggplot(A_energy, aes(x = SAL23, y = GR, size = SAL23, fill = GR)) +
   facet_wrap(~ Count)  # Ülkeye göre grafikleri ayır
 ```
 
-## D Enerji Ürünlerin Marka Seviyesi Seçimi
+## D Enerji Ürünlerin Marka Seçimi
+
+Genel bakış
+
+```{r}
+# Veri setini yukleme
+veri <- read.csv(file = "datalisted.csv", head = TRUE, sep=";")
+
+veri$Size <- as.factor(veri$Size)
+veri$GR <- as.factor(veri$GR)
+veri$Count <- as.factor(veri$Count)
+veri$Cons <- as.factor(veri$Cons)
+veri$Col <- as.factor(veri$Col)
+veri$Dis <- as.factor(veri$Dis)
+veri$Time <- as.factor(veri$Time)
+veri$WtCns <- as.factor(veri$WtCns)
+veri$En <- as.factor(veri$En)
+veri$Cap <- as.factor(veri$Cap)
+veri$Fast <- as.factor(veri$Fast)
+veri$PRG <- as.factor(veri$PRG)
+veri$NOI <- as.factor(veri$NOI)
+veri$Thrd <- as.factor(veri$Thrd)
+veri$SLI <- as.factor(veri$SLI)
+veri$AUD <- as.factor(veri$AUD)
+veri$Con <- as.factor(veri$Con)
+veri$SAL22 <- gsub(",", ".", veri$SAL22)
+veri$SAL23 <- gsub(",", ".", veri$SAL23)
+veri$SAL22 <- as.numeric(veri$SAL22)
+veri$SAL23 <- as.numeric(veri$SAL23)
+
+
+# veriyi Satıs sütununa göre sıralama
+satis_data <- veri[order(veri$SAL23, decreasing = TRUE),]
+
+# satıs sütununa göre sıralanan veriyi alma
+SatisAnaliz <- subset(satis_data, select = c("Count", "Con","SAL23","GR", "WtCns","En","NOI"))
+
+# dplyr paketini yükleme
+library(dplyr)
+library(tidyr)
+library(ggplot2) 
+library(scales)
+
+# D Energy ait verileri filtreleme
+D_energy <- filter(SatisAnaliz, En == "D")
+
+
+#bubble graph
+
+ggplot(D_energy, aes(x = SAL23, y = GR, size = SAL23, fill = GR)) +
+  geom_point(alpha = 0.6, shape = 21) +
+  scale_size(range = c(2, 10)) +
+  theme_minimal() +
+  theme(
+    legend.position = "none",
+    plot.title = element_text(size = 11)
+  ) +  # Virgülü buraya taşıdım
+  ggtitle("Marka Seçimine göre Satış Oranı Dağılımı") +
+  xlab("") +
+  ylab("Satış Oranı")
+
+```
 
 Ülke bazlı D enerji ürünlerin marka bazlı ürün seçimleri. En büyük satış adedi olduğu icin buradaki seçimlere baktık.
 
@@ -1036,17 +1135,17 @@ library(scales)
 library(ggplot2)
 
 # "D_energy" veri setinden "Con", "SAL23" ve "En" sütunlarını seçme
-bubble_data <- SatisAnaliz[, c("Con", "SAL23", "En")]
+bubble_data <- SatisAnaliz[, c("GR", "SAL23", "En")]
 
 # Bağlantılı ürünlerin satışlarını ve enerji sınıfını toplama
-bubble_data <- aggregate(SAL23 ~ Con + En, data = bubble_data, sum)
+bubble_data <- aggregate(SAL23 ~ GR + En, data = bubble_data, sum)
 
 # Bubble chart oluşturma
-ggplot(bubble_data, aes(x = Con, y = SAL23, size = SAL23, color = En)) +
+ggplot(bubble_data, aes(x = GR, y = SAL23, size = SAL23, color = En)) +
   geom_point(alpha = 0.6) +
   scale_size(range = c(3, 15)) +
   scale_color_viridis_d() +  # Enerji sınıflarına göre renklendirme
-  labs(title = "Bağlantılı Ürün Satışları", x = "Bağlantılı Durum", y = "Toplam Satış") +
+  labs(title = "Enerji-Marka Satışları", x = "Bağlantılı Durum", y = "Toplam Satış") +
   scale_y_continuous(labels = scales::label_number(scale = 1e-3, suffix = "K")) +
   theme_minimal()
 
